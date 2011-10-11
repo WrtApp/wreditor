@@ -6,3 +6,5 @@ There are a ton of awesome front end HTML boilerplates out there and it can be t
 
 Boilerplate Redux uses code from the following projects:
 
+* jQuery Effects Library - Minified and uncompressed dev versions included
+* Normalize.css - Not a reset, a baseline to be modified
