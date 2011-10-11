@@ -1,0 +1,17 @@
+# GitIgnore for Boilerplate Redux
+
+# Editor Files
+
+*.sublime-workspace
+*.sublime-project
+*.chproj
+*.esproj
+
+# Folders
+
+
+
+# Individual Files
+
+scratch.txt
+todo.txt
