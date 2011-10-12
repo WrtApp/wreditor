@@ -1,8 +1,10 @@
 # Boilerplate Redux
 
-There are a ton of awesome front end HTML boilerplates out there and it can be tough to choose between them all. So why choose at all? Boilerplate Redux is my version of the perfect HTML5 boilerplate. It's based on a number of different projects all mashed together to suit my workflow. It is a total rewrite of my original boilerplate project (still available if anyone like it better) called HTML5 Bill-erplate.
+There are a ton of awesome front end HTML boilerplates out there and it can be tough to choose between them all. Boilerplate Redux is my version of the perfect HTML5 boilerplate. It's based on a number of different projects all mashed together to suit my workflow. It is a total rewrite of my original boilerplate project (still available if anyone like it better) called HTML5 Bill-erplate.
 
 BP-Redux places a heavy focus on the LESS stylesheet language (http://lesscss.org) and a fluid grid system based on a max-width of 1140px.
+
+It is our goal to make Boilerplates accessible to total web n00bs. We were all n00bs once and I personally feel that if you give a n00b a good jumping off point, and explain the why and how of coding, said n00b will learn quicker and adhere to best practices as second nature. Granted, the boilerplates out there already are very n00b friendly but we want to really spell a few things out for people here.
 
 ## Components
 
@@ -17,7 +19,15 @@ Boilerplate Redux uses code from the following projects:
 
 Right now, this is at version 0.0.1. That means there isn't enough to provide a working project. If you'd just like to download the code and make your own modifications, feel free. Otherwise we'll have a run down of how to set yourself up real quick soon.
 
-## Usage Notes
+## Initial Setup
+
+1. Place the files in your working directory (or just move the folder wherever you like).
+
+2. If you're using a LAMP stack or running MAMP, XAMPP, etc. then make sure the project is in a folder your server software recognizes. In a normal LAMP environment it'll usually be in ~/htdocs.
+
+3. COMING SOON!
+
+### Usage Notes
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
 
@@ -35,4 +45,5 @@ We have to give credit where credit is due. Thanks to all these folks who are by
 Paul Irish - HTML5 Boilerplate - http://html5boilerplate.com
 @andytlr - 1140 Grid System - http://cssgrid.net
 Cloudhead - LESS dynamic stylesheet language - http://lesscss.org
+Bryan Jone - LESS.app (Mac only) - http://incident57.com/less/
 ... and more coming soon.
