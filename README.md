@@ -10,7 +10,7 @@ It is our goal to make Boilerplates accessible to total web n00bs. We were all n
 
 Boilerplate Redux uses code from the following projects:
 
-* jQuery Effects Library - Minified and uncompressed dev versions included
+* jQuery Effects Library (1.6.4) - Minified and uncompressed dev versions included
 * Normalize.css - Not a reset, a baseline to be modified
 * 1140 CSS Grid - The heart of our Less-based grid system
 * More as we add them...
@@ -25,7 +25,11 @@ Right now, this is at version 0.0.1. That means there isn't enough to provide a 
 
 2. If you're using a LAMP stack or running MAMP, XAMPP, etc. then make sure the project is in a folder your server software recognizes. In a normal LAMP environment it'll usually be in ~/htdocs.
 
-3. COMING SOON!
+3. Rename the `1.htaccess` file to simply `.htaccess`
+
+4. Open the project folder in your favorite browser. You should get a success message if you have PHP running. (NOTE: This is only necessary if you plan to use any server-side scripts, otherwise you can just open normal html files anywhere).
+
+_NOTE:_ The server test is currently not included and you will never see the success message. Real test coming soon.
 
 ### Usage Notes
 

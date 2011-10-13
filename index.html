@@ -1,31 +1,64 @@
 <!-- index.html v0.0.1 -->
 
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<title>REPLACEME</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	 
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
+	<!-- Mobile viewpoer optimization -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Place your favicon.ico and apple-touch-icon.png in the site root folder instead of referencing them here -->
+
+	<!-- Your main stylesheet for all media. Remove version number for production mode -->
+	<link rel="stylesheet" href="css/style.css?v=2">
+
+</head>
 
 <body>
 
-<!-- DELETE EVERYTHING FROM HERE TO THE NEXT COMMENT... -->
-<h1>Welcome</h1>
-<p>
-You've successfully set up your project boilerplate and can view plain HTML files.
-</p>
+	<div id="container">
+		<header>
 
-<h1>LAMP Test</h1>
-<p>
-You should see a success message below this text. If you do not see it, that means your local web server is not running or is not configured correctly.
-</p>
+		</header>
+		<section id="main-container">
 
-<?php include('phptest.html'); ?>
+			<h1>Server Test</h1>
+			<p>
+			The server test included with Boilerplate Redux is not comprehensive and only tests if your web server is running with PHP active. Generally, if you can parse PHP then you have a server running.
+			<br />
+			<br />
+			<a href="phptest.php">Test Now</a>
+			</p>
 
-<h2>Troubleshooting</h2>
-<p>
-Please see the documentation for your server environment. If you don't plan to use any server side languages like PHP and plan to use only JavaScript, CSS, and HTML in your sites, then you don't even need any server software. It's a good idea to learn how to work in that environment anyway, however, and would like to encourage you to get started with MAMP or XAMPP.
-</p>
-<!-- ...DELETE UP TO and INCLUDING THIS LINE -->
+		</section>
+		<footer>
+
+		</footer>
+	</div> <!-- end of #container -->
+
+	<!-- Your JavaScript should be at the bottom (with some exceptions) -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js">\x3C/script>')</script>
+
+	<!-- Put your Analytics Snippet here. Check out http://piwik.org for a great self-hosted analytics app -->
+
+	<!--Promp old IE users to install Chrome Frame. Remove to support IE6 -->
+	<!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]--> 
+
 
 </body>
 </html>
