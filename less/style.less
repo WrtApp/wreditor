@@ -2,7 +2,7 @@
  *															*
  * 	   WELCOME TO BOILERPLATE REDUX's |style.less| FILE!	*
  *															*
- * This is your main stylesheet file. Do not edit there		*
+ * This is your main stylesheet file. Do not edit the		*
  * main .css file in the /css folder. Instead, compile 		*
  * this file using either Less.app, the Less compiler 		*
  * running on Node.js, or one of the SASS/SCSS Ruby gems 	*
@@ -11,13 +11,71 @@
 \************************************************************/
 
 /*
- * Stylesheet imports. Always concatenate and minify your styles into
+ * STYLESHEET IMPORTS: Always concatenate and minify your styles into
  * a single file when ready for production. We use imports here to
  * save space and organize for an easier development workflow.
+ * Mind the cascade! Styles are imported in order for a reason!
  */
 
 /* CSS "reset" */
 @import url('normalize.css');
 
 /* Grid Framework */
-@import url('grid.css')
+@import url('grid.css');
+
+/*:::: COLORS ::::*/
+/* Replace examples with your own */
+
+@black: #1234;
+@white: #fff;
+
+/*:::: MIXINS ::::*/
+/* Useful for gradients, oft-repeated and prefixed styles, and more */
+/* Replace examples with your styles */
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.default-radius {
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/*:::: TYPOGRAPHY ::::*/
+
+h1, h2, h3, h4, h5, h6 {
+	/* Specify font, weight, and default color here */
+}
+
+/* Hint: replace this comment with styles for each h, 1-6. Sizes for each need specification */
+
+/**************************************\
+|* THE REST OF YOUR STYLES BELOW HERE *|
+\**************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*:::: HELPER CLASSES ::::*/
+
+/* 
+ * Keep ALL your styles above this section. 
+ * Only modify if you know what you are doing 
+ */
+
