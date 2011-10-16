@@ -38,11 +38,11 @@
 	margin-right: auto;
 }
 
-.default-radius {
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+.default-radius(@radius: 10px) {
+	-moz-border-radius: @arguments; /* See lesscss.org for more on @arguments */
+	-o-border-radius: @arguments;
+	-webkit-border-radius: @arguments;
+	border-radius: @arguments;
 }
 
 /*:::: TYPOGRAPHY ::::*/
