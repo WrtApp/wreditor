@@ -7,6 +7,7 @@
  * this file using either Less.app, the Less compiler 		*
  * running on Node.js, or one of the SASS/SCSS Ruby gems 	*
  * out there. See http://lesscss.org for more on compilers 	*
+ * and the Less CSS language								*
  *															*
 \************************************************************/
 
@@ -45,10 +46,15 @@
 }
 
 /*:::: TYPOGRAPHY ::::*/
-
+ 
 h1, h2, h3, h4, h5, h6 {
 	/* Specify font, weight, and default color here */
 }
+
+/*:::: BUTTONS ::::*/
+/* Useful if you use regular links as buttons */
+
+/*:::: FORMs ::::*/
 
 /* Hint: replace this comment with styles for each h, 1-6. Sizes for each need specification */
 
@@ -83,19 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .ir br { display: none; }
  
-/* Hide for both screenreaders and browsers: h5bp.com/m */
+/* Hidden from browsers and screen readers */
 .hidden { display: none !important; visibility: hidden; }
  
-/*  Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/*  Hidden visibly but available to screenreaders. Same as .hidden but good for accessibility */
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
  
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/* Extends .visually hidden to allow element to be focusable when using the keyboard */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
  
-/* Hide visually and from screenreaders, but maintain layout */
+/* Hide visually and from screenreaders, but maintain layout. Think of it as having an element match the background - looks hidden but affects other elements. Cannot be highlighted */
 .invisible { visibility: hidden; }
  
-/* Contain floats: h5bp.com/q */
+/* Contain floats: h5bp.com/q This is a godsend in many cases */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
@@ -104,16 +110,11 @@ h1, h2, h3, h4, h5, h6 {
  
 /* =============================================================================
  
-265. 
-266.    
-267.    
-268.    
-269. 
-270.   Use Media Queries for Responsive Design.
-271.   Pixel widths given as samples.
-272.   Edit the widths to suit where your design breaks, rather than
-273.   for device pixels, see 'Using a mobile-first approach': h5bp.com/w
-274.   ========================================================================== */
+   Use Media Queries for Responsive Design.
+   Pixel widths given as samples.
+   Edit the widths to suit where your design breaks, rather than
+   for device pixels, see 'Using a mobile-first approach': h5bp.com/w
+   ========================================================================== */
  
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
