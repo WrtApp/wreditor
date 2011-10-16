@@ -9,60 +9,74 @@
 
  /*:::: GRID VARIABLES ::::*/
 
- @f-width: 1140px;
+ @full: 1140px;
  @half: 540px;
- @1quarter: 267px;
- @3quarters: 801px;
- @1third: 300px;
- @2thirds: 600px;
+ @1quarter: 260px;
+ @3quarters: 840px;
+ @1third: 360px;
+ @2thirds: 720px;
+
+ /* Centers our full-width divs */
+
+ .centered {
+ 	margin-right: auto;
+ 	margin-left: auto;
+ }
 
  /*:::: GRID LAYOUT ::::*/
 
- .full-width {
- 	width: @f-width;
+  .full-width {
  	display: block;
+ 	width: @full;
  	padding-left: 20px;
  	padding-right: 20px;
+ 	.centered;
  }
-
+ 
  .one-half {
- 	width: @half;
  	display: block;
+ 	width: @half;
+ 	margin-right: 20px;
+ }
+ 
+ .one-third {
+ 	display: block;
+ 	width: @1third;
+ 	margin-right: 20px;
+ }
+ 
+ .two-thirds {
+ 	display: block;
+ 	width: @2thirds;
+ 	margin-right: 20px;
+ }
+ 
+ .one-quarter {
+ 	display: block;
+ 	width: 260px;
+ 	margin-right: 20px;
+ }
+ 
+ .three-quarters {
+ 	display: block;
+ 	width: @3quarters;
  	margin-right: 20px;
  }
 
- .one-quarter {
- 	width: @1quarter;
- 	display: block;
- }
-
- .three-quarters {
- 	width: @3quarters;
- 	display: block;
- }
-
- .one-third {
- 	width: @1third;
- 	display: block;
- }
-
- .two-thirds {
- 	width: @2thirds;
- 	display: block;
- }
-
  /*:::: FLOATS ::::*/
-
+ 
  .left {
  	float: left;
  }
-
+ 
  .right {
  	float: right;
  }
 
- /*:::: SPECIAL ::::*/
-
+ /* Last div in a row can't mess up our nice grid */
+ 
  .last {
- 	margin-rigt: 0px;
+ 	margin-right: 0px;
  }
+
+ 

@@ -31,6 +31,10 @@ Right now, this is at version 0.0.1. That means there isn't enough to provide a 
 
 _NOTE:_ The server test is currently not included and you will never see the success message. Real test coming soon.
 
+## The Grid
+
+The grid is based on the 1140 grid framework with a Less twist. Used as-is, it works out of the box but won't solve all your problems. Clearfix hacks and other CSS wizardry may be required (hint: special classes for some common problems are included). That said, the grid has been tested and works if you structure your HTML somewhat decently.
+
 ### Usage Notes
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
