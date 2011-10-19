@@ -26,7 +26,6 @@ Setup is pretty easy and Fraction.less comes with some tools to help you test yo
 Download and extract the files to where you want to start developing or do a 
     git clone git://github.com/billpatrianakos/Fractionless-Boilerplate
 
-At this point you have the option to run the server test. You may open the `/test/index.php` file directly or navigate to it in your browser (usually from `http://localhost/path/to/your/site). The test will just check to see if PHP is running on your computer. You can skip this altogether if you don't plan on using anything other than HTML, CSS, and JavaScript.
 
 ## The Grid
 
@@ -46,18 +45,15 @@ This is your main stylesheet. It imports the grid and normalize.css files. Impor
 
 We've also included `less.js` for those who want to save compiling for later or want a quick way to experiment with Less.
 
+## Tests (Still under development)
 
+The `test/` folder (will) contains a few tests and examples for you to see how things work. You can test that your local server is running and see the grid in action before diving in.
 
 ### Usage Notes
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
 
-**HTACCESS Files:**
-The .htaccess file bundled with Fraction.less is named '1.htaccess'. The settings specified in this file will not take effect until you rename the file to simply '.htaccess'. Note that it has no characters before the dot (.). The reason for this is because most systems hide files without a name by default. Copying the contents of a folder with a hidden .htaccess file on a Mac or Windows system will only copy the non-hidden files to the new location. Be mindful of this after you've renamed the file and set up a testing or production environment.
-
-The consequences of a non-existent .htaccess file include:
-* No Chrome Frame for IE users
-* Media playback errors (especially in Firefox) when using new HTML5 `<audio` and `<video>` tags.
+_.htaccess Files_ - Fraction.less comes with a file named `1.htaccess`. On many systems hidden files are not included when pressing `Ctrl + A` then `Ctrl + C` to copy files between folders. To ensure this important file gets included in that situation we've named it. For it to work correctly you must rename it to simply `.htaccess`.
 
 ### Credits
 
@@ -68,3 +64,7 @@ Paul Irish - HTML5 Boilerplate - http://html5boilerplate.com
 Cloudhead - LESS dynamic stylesheet language - http://lesscss.org
 Bryan Jone - LESS.app (Mac only) - http://incident57.com/less/
 ... and more coming soon.
+
+# License
+
+Fraction.less Boilerplate is licensed under the Apache License 2.0. See the License.md file for details. This means you can use it however and wherever you want. You don't have to release any derivatives as open source and you are free to charge money for derived works. That's why I didn't go with the GPL. GPL kind of sucks...
