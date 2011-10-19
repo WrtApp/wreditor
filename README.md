@@ -1,46 +1,59 @@
-# Boilerplate Redux
+# Fraction.less Boilerplate
 
-There are a ton of awesome front end HTML boilerplates out there and it can be tough to choose between them all. Boilerplate Redux is my version of the perfect HTML5 boilerplate. It's based on a number of different projects all mashed together to suit my workflow. It is a total rewrite of my original boilerplate project (still available if anyone like it better) called HTML5 Bill-erplate.
+An HTML5/CSS3 boilerplate with a misleading name.
 
-BP-Redux places a heavy focus on the LESS stylesheet language (http://lesscss.org) and a fluid grid system based on a max-width of 1140px.
+Fraction.less is geared toward web dev n00bs and the lazy. It places a heavy emphasis on using the [http://lesscss.org](Less CSS) language, provides some great and commonly used JavaScript libraries, gives a good base directory structure, and implements a very simple grid.
 
-It is our goal to make Boilerplates accessible to total web n00bs. We were all n00bs once and I personally feel that if you give a n00b a good jumping off point, and explain the why and how of coding, said n00b will learn quicker and adhere to best practices as second nature. Granted, the boilerplates out there already are very n00b friendly but we want to really spell a few things out for people here.
+Despite the name, Fraction.less uses a grid that's totally about fractions. Instead of using columns like every other grid system, Fraction.less uses fractions within wrappers splitting the page up into halves, thirds, and quarters.
 
 ## Components
 
-Boilerplate Redux uses code from the following projects:
+Fraction.less Boilerplate uses code from the following projects:
 
 * jQuery Effects Library (1.6.4) - Minified and uncompressed dev versions included
 * Normalize.css - Not a reset, a baseline to be modified
-* 1140 CSS Grid - The heart of our Less-based grid system
+* 1140 CSS Grid - The heart of our Less-based grid system, modified with Less
+* Less CSS - The Less stylesheet language
+* Less.app - For those of you on a Mac, download the Mac branch to get this great compiler
 * More as we add them...
 
 # Usage
 
-Right now, this is at version 0.0.1. That means there isn't enough to provide a working project. If you'd just like to download the code and make your own modifications, feel free. Otherwise we'll have a run down of how to set yourself up real quick soon.
+Setup is pretty easy and Fraction.less comes with some tools to help you test your development environment.
 
 ## Initial Setup
 
-1. Place the files in your working directory (or just move the folder wherever you like).
+Download and extract the files to where you want to start developing or do a 
+    git clone git://github.com/billpatrianakos/Fractionless-Boilerplate
 
-2. If you're using a LAMP stack or running MAMP, XAMPP, etc. then make sure the project is in a folder your server software recognizes. In a normal LAMP environment it'll usually be in ~/htdocs.
-
-3. Rename the `1.htaccess` file to simply `.htaccess`
-
-4. Open the project folder in your favorite browser. You should get a success message if you have PHP running. (NOTE: This is only necessary if you plan to use any server-side scripts, otherwise you can just open normal html files anywhere).
-
-_NOTE:_ The server test is currently not included and you will never see the success message. Real test coming soon.
+At this point you have the option to run the server test. You may open the `/test/index.php` file directly or navigate to it in your browser (usually from `http://localhost/path/to/your/site). The test will just check to see if PHP is running on your computer. You can skip this altogether if you don't plan on using anything other than HTML, CSS, and JavaScript.
 
 ## The Grid
 
-The grid is based on the 1140 grid framework with a Less twist. Used as-is, it works out of the box but won't solve all your problems. Clearfix hacks and other CSS wizardry may be required (hint: special classes for some common problems are included). That said, the grid has been tested and works if you structure your HTML somewhat decently.
+The Fraction.less grid is based on the 1140 Grid System. It works out of the box but you have the option of being able to change the widths of each class by modifying a few Less variables.
+
+To use the grid, apply the `.full-width` class to any container elements. These will either hold content spanning the entire page width or a minimum of two smaller elements.
+
+Always add the `.left` class to all elements you plan to line up in a row. All rows must add up to 1 thus you must be able to add simple fractions in your head.
+
+The last element in each row will get a `.last` class so you don't mess up the layout.
+
+Apply `.clearfix` to any `.full-width` elements that act up on you. In 90% of my tests, all layout issues could be solved with `.clearfix`.
+
+## style.less
+
+This is your main stylesheet. It imports the grid and normalize.css files. Imports will only work if you've compiled your Less files first which requires either the Less Ruby Gem, the Less compiler running on Node.js, or Less.app on Mac.
+
+We've also included `less.js` for those who want to save compiling for later or want a quick way to experiment with Less.
+
+
 
 ### Usage Notes
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
 
 **HTACCESS Files:**
-The .htaccess file bundled with BP-Redux is named '1.htaccess'. The settings specified in this file will not take effect until you rename the file to simply '.htaccess'. Note that it has no characters before the dot (.). The reason for this is because most systems hide files without a name by default. Copying the contents of a folder with a hidden .htaccess file on a Mac or Windows system will only copy the non-hidden files to the new location. Be mindful of this after you've renamed the file and set up a testing or production environment.
+The .htaccess file bundled with Fraction.less is named '1.htaccess'. The settings specified in this file will not take effect until you rename the file to simply '.htaccess'. Note that it has no characters before the dot (.). The reason for this is because most systems hide files without a name by default. Copying the contents of a folder with a hidden .htaccess file on a Mac or Windows system will only copy the non-hidden files to the new location. Be mindful of this after you've renamed the file and set up a testing or production environment.
 
 The consequences of a non-existent .htaccess file include:
 * No Chrome Frame for IE users
