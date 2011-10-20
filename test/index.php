@@ -6,14 +6,11 @@
 	<body>
 
 	<div id="main">
-		
-		<h1>Server Test</h1>
-			<p>
-			The server test included with Boilerplate Redux is not comprehensive and only tests if your web server is running with PHP active. Generally, if you can parse PHP then you have a server running.
-			<br />
-			<br />
-			<a href="phptest.php">Test Now</a>
-			</p>
+
+		<h1>Grid Examples</h1>
+			<ul>
+				<li><a href="grid.html">Default Grid</a> (Coming soon)</li>
+			</ul>
 
 		</div>
 

@@ -2,7 +2,7 @@
 
 Why not go GPL like all the cool kids? Becuase: 
 
-* Richard Stallman is a self-serving fundamentalist baby more interested in getting credit and praise rather than looking out for the interests of the FSF which he is an awful spokesman for.
+* Richard Stallman is a self-serving fundamentalist baby more interested in getting credit and praise rather than looking out for the interests of the FSF for which he is an awful spokesman for.
 
 * The GPL requires that all derived works also be GPL. We can't have that now. We want you to use Fraction.less for profit if you want.
 
