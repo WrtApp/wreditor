@@ -39,6 +39,8 @@ The last element in each row will get a `.last` class so you don't mess up the l
 
 Apply `.clearfix` to any `.full-width` elements that act up on you. In 90% of my tests, all layout issues could be solved with `.clearfix`.
 
+The grid is easily extensible but only ships with divisions from full-width to one-quarter. This is enough to get a layout working within 5 minutes and can be easily added to with intermediate sized columns if needed.
+
 ## style.less
 
 This is your main stylesheet. It imports the grid and normalize.css files. Imports will only work if you've compiled your Less files first which requires either the Less Ruby Gem, the Less compiler running on Node.js, or Less.app on Mac.
@@ -47,7 +49,7 @@ We've also included `less.js` for those who want to save compiling for later or 
 
 ## Tests (Still under development)
 
-The `test/` folder (will) contains a few tests and examples for you to see how things work. You can test that your local server is running and see the grid in action before diving in.
+Tests have been abandoned. We see them as unnecessary bloat in an otherwise obvious system. We will add them at some point if there is a demand.
 
 ### Usage Notes
 

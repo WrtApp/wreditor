@@ -25,36 +25,113 @@
 @import url('grid.css');
 
 /*:::: COLORS ::::*/
-/* Replace examples with your own */
 
 @black: #1234;
 @white: #fff;
 
 /*:::: MIXINS ::::*/
-/* Useful for gradients, oft-repeated and prefixed styles, and more */
-/* Replace examples with your styles */
 .centered {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.default-radius(@radius: 10px) {
+.border-radius(@radius: 10px) {
 	-moz-border-radius: @arguments; /* See lesscss.org for more on @arguments */
 	-o-border-radius: @arguments;
 	-webkit-border-radius: @arguments;
 	border-radius: @arguments;
 }
 
+.box-shadow (@x: 0, @y: 0, @blur 5px, @color: #fff) {
+  -o-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.inset-shadow (@inset: inset, @x: 0, @y: 0, @blur: 5px, @color: #fff) {
+  -o-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.text-shadow (@x: 0, @y: 0, @blur: 1px, @color: #fff) {
+  -o-text-shadow: @arguments;
+  -moz-text-shadow: @arguments;
+  -webkit-text-shadow: @arguments;
+  text-shadow: @arguments;
+}
+
+/* BACKGROUND GRADIENT MIXINS */
+
+.link-btn-bg {
+  
+}
+
+.link-btn-hvr {
+  
+}
+
 /*:::: TYPOGRAPHY ::::*/
  /* Hint: replace this comment with styles for each h, 1-6. Sizes for each need specification */
 h1, h2, h3, h4, h5, h6 {
-	/* Specify font, weight, and default color here */
+	font-family: Helvetica, Tahoma, sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  color: ;
+}
+
+p {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1 {
+  font-size: 36px;
 }
 
 /*:::: BUTTONS ::::*/
-/* Useful if you use regular links as buttons */
+
+/* For styling links as buttons */
+.link-button {
+  padding: 10px;
+  color: @white;
+  .border-radius(10px);
+}
 
 /*:::: FORMs ::::*/
+
+textarea {
+  
+}
+
+input[type=text], input[type=email], input[type=password] {
+  
+}
+
+input[type=submit] {
+  
+}
 
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
