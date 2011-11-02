@@ -1,10 +1,10 @@
 # Fraction.less Boilerplate
 
-An HTML5/CSS3 boilerplate with a misleading name.
+Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
 
-Fraction.less is geared toward web dev n00bs and the lazy. It places a heavy emphasis on using the [http://lesscss.org](Less CSS) language, provides some great and commonly used JavaScript libraries, gives a good base directory structure, and implements a very simple grid.
+Fraction.less has a totally misleading name. The grid is based totally on fractions but in a way that won't require much math. If you can add fractions to equal one-whole then you can use Fraction.less.
 
-Despite the name, Fraction.less uses a grid that's totally about fractions. Instead of using columns like every other grid system, Fraction.less uses fractions within wrappers splitting the page up into halves, thirds, and quarters.
+Fraction.less isn't meant to be all things to all people. It's meant for simple page layouts that can be divided from halves down to fourths and most things in between. Before all you hipsters write it off, actually look at the grid styles.
 
 ## Components
 
@@ -13,8 +13,7 @@ Fraction.less Boilerplate uses code from the following projects:
 * jQuery Effects Library (1.6.4) - Minified and uncompressed dev versions included
 * Normalize.css - Not a reset, a baseline to be modified
 * 1140 CSS Grid - The heart of our Less-based grid system, modified with Less
-* Less CSS - The Less stylesheet language
-* Less.app - For those of you on a Mac, download the Mac branch to get this great compiler
+* Less CSS - The Less stylesheet language. See (lesscss.org)[http://lesscss.org] for more.
 * More as we add them...
 
 # Usage
@@ -24,7 +23,7 @@ Setup is pretty easy and Fraction.less comes with some tools to help you test yo
 ## Initial Setup
 
 Download and extract the files to where you want to start developing or do a 
-    git clone git://github.com/billpatrianakos/Fractionless-Boilerplate
+    git clone git://github.com/billpatrianakos/Fractionless-Boilerplate.git
 
 
 ## The Grid
@@ -47,9 +46,17 @@ This is your main stylesheet. It imports the grid and normalize.css files. Impor
 
 We've also included `less.js` for those who want to save compiling for later or want a quick way to experiment with Less.
 
-## Tests (Still under development)
+## Compiling your .less files
 
-Tests have been abandoned. We see them as unnecessary bloat in an otherwise obvious system. We will add them at some point if there is a demand.
+Mac users can search for and install Less.app which gives you an easy GUI interface app that watches for changes to .less files and compiles them automatically.
+
+First install the LESS gem using `you@computer$ gem install less`
+
+Or you can get LESS if you've got node.js and npm using `you@computer$ npm install less`
+
+To compile your less stylesheets run `you@computer$ cd /path/to/project/` making sure that you switch to the directory that holds your `/less` and `/css` directories. Then run the following command:
+
+`you@computer$ lessc /less
 
 ### Usage Notes
 
