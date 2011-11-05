@@ -1,4 +1,11 @@
-# GitIgnore for Boilerplate Redux
+# GitIgnore for Fraction.less
+
+# Development-only files and folders
+## Uncomment the lines you wish to ignore. These files are generally
+## unchanging and only needed on the machine used for optimization and final
+## testing before production
+
+# test/
 
 # Editor Files
 
