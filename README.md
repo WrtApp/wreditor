@@ -2,19 +2,18 @@
 
 Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
 
-Fraction.less has a totally misleading name. The grid is based totally on fractions but in a way that won't require much math. If you can add fractions to equal one-whole then you can use Fraction.less.
-
-Fraction.less isn't meant to be all things to all people. It's meant for simple page layouts that can be divided from halves down to fourths and most things in between. Before all you hipsters write it off, actually look at the grid styles.
+Fraction.less comes with a simple, solid grid system, some common boilerplate styling, common jQuery plugin starting points (sliders, accordions, etc.), tons of HTML% boilerplate, and best of all, it takes advantage of the LESS stylesheet superset!
 
 ## Components
 
 Fraction.less Boilerplate uses code from the following projects:
 
-* jQuery Effects Library (1.6.4) - Minified and uncompressed dev versions included
-* Normalize.css - Not a reset, a baseline to be modified
-* 1140 CSS Grid - The heart of our Less-based grid system, modified with Less
-* Less CSS - The Less stylesheet language. See (lesscss.org)[http://lesscss.org] for more.
-* More as we add them...
+* jQuery 1.6.4 effect library
+* Normalize.css CSS 'reset'
+* LESS CSS stylesheet language
+* Validate.js for client side form validation
+* Vanity JS for common jQuery plugins
+* Load.js script loader
 
 # Usage
 
@@ -40,17 +39,29 @@ Apply `.clearfix` to any `.full-width` elements that act up on you. In 90% of my
 
 The grid is easily extensible but only ships with divisions from full-width to one-quarter. This is enough to get a layout working within 5 minutes and can be easily added to with intermediate sized columns if needed.
 
-## style.less
+### style.less
 
 This is your main stylesheet. It imports the grid and normalize.css files. Imports will only work if you've compiled your Less files first which requires either the Less Ruby Gem, the Less compiler running on Node.js, or Less.app on Mac.
 
 We've also included `less.js` for those who want to save compiling for later or want a quick way to experiment with Less.
 
-## Compiling your .less files
+### Compiling your .less files
 
-Mac users can search for and install Less.app which gives you an easy GUI interface app that watches for changes to .less files and compiles them automatically.
+#### Using Less.js (The lazy way)
+
+You can have your less files compile on the fly using less.js. This is not recommended for production. Use this in development mode only as the overhead necessary to download and parse less.js on the client side isn't worth it when you can compile .less directly to CSS using the methods below.
+
+In the `index.html` file, uncomment the `<link>` tag referring to less.js file and make sure the path is set to the correct .less file. If you use this method you must take care to also link to `normalize.less` and `grid.less` or the grid system and reset will not work. The easy way to do this would be to use `@import` in your `style.less`.
+
+#### Using Less.app
+
+Mac users can search for and install Less.app which gives you an easy GUI interface app that watches for changes to .less files and compiles them automatically. UPDATE: A new Mac App called CodeKit is now available by the same developer as Less.app. It compiles LESS, CoffeeScript, does image optimization, concatenation, minification on all files, and more! It's free while in beta so check it out.
+
+#### Using the Ruby Gem
 
 First install the LESS gem using `you@computer$ gem install less`
+
+#### Less Compiler via Node.js and NPM
 
 Or you can get LESS if you've got node.js and npm using `you@computer$ npm install less`
 
@@ -62,18 +73,33 @@ To compile your less stylesheets run `you@computer$ cd /path/to/project/` making
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
 
-_.htaccess Files_ - Fraction.less comes with a file named `1.htaccess`. On many systems hidden files are not included when pressing `Ctrl + A` then `Ctrl + C` to copy files between folders. To ensure this important file gets included in that situation we've named it. For it to work correctly you must rename it to simply `.htaccess`.
+_.htaccess Files_ - Fraction.less comes with a file named `bootstrap.htaccess`. On many systems hidden files are not included when pressing `Ctrl + A` then `Ctrl + C` to copy files between folders. To ensure this important file gets included in that situation we've named it. For it to work correctly you must rename it to simply `.htaccess`.
 
 ### Credits
 
-We have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I.
+I have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I.
 
-Paul Irish - HTML5 Boilerplate - http://html5boilerplate.com
-@andytlr - 1140 Grid System - http://cssgrid.net
-Cloudhead - LESS dynamic stylesheet language - http://lesscss.org
-Bryan Jone - LESS.app (Mac only) - http://incident57.com/less/
+[http://html5boilerplate.com](Paul Irish) - HTML5 Boilerplate
+[http://cssgrid.net](@andytlr) - 1140 Grid System
+[http://lesscss.org](Cloudhead) - LESS dynamic stylesheet language
+[http://incident57.com/less/](Bryan Jones) - LESS.app and CodeKit (Mac only)
+[http://rickharrison.github.com/validate.js/](Rick Harrison) - validate.js, client side JavaScript validation library
+[http://vanity.enavu.com/](Enavu Network) - Vanity JS common jQuery plugin starter kit
+[https://github.com/chriso/load.js](ChrisO) - Load.js, a js lazyloader
 ... and more coming soon.
 
 # License
 
 Fraction.less Boilerplate is licensed under the Apache License 2.0. See the License.md file for details. This means you can use it however and wherever you want. You don't have to release any derivatives as open source and you are free to charge money for derived works. That's why I didn't go with the GPL. GPL kind of sucks...
+
+# Roadmap
+
+The following features will be implemented in upcoming releases:
+
+* Add a basic favicon and apple touch icons
+* Alternate/improved/better/new dependency management like YepNope.js
+* Self-adjusting grid (using functions in LESS)
+* Basic mailto script
+* Customize `normalize.css` and `style.less` even more
+* Build scripts and optimizers
+* Typography styles

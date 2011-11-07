@@ -1,5 +1,5 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+/* SITE CREDITS - These humans made this site possible: */
+/* See http://humanstxt.org for more on this standard */
 
 
 /* TEAM */
@@ -13,8 +13,11 @@
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: jQuery, LESS, Fraction.less
+  Components: jQuery, LESS, Fraction.less Boilerplate
   Software:
+  Last updated: YYYY/MM/DD
+  Language:
+  Doctype: html
   
 
       ________                                      :::::::
