@@ -103,3 +103,8 @@ The following features will be implemented in upcoming releases:
 * Customize `normalize.css` and `style.less` even more
 * Build scripts and optimizers
 * Typography styles
+* Benchmarking tests
+* Prettier 404
+* General optimizations everywhere and time-savers
+
+Contributors and suggetions welcome! bill-at-billpatrianakos-dot-me
