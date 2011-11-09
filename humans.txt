@@ -1,4 +1,4 @@
-/* SITE CREDITS - These humans made this site possible: */
+/* SITE CREDITS: These humans made this site possible: */
 /* See http://humanstxt.org for more on this standard */
 
 
