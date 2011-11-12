@@ -1,4 +1,5 @@
 # Fraction.less Boilerplate
+## Now at version 1.0!
 
 Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
 
