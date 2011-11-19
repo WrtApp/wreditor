@@ -1,4 +1,5 @@
 # Fraction.less Boilerplate
+
 ## Now at version 1.0!
 
 Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
@@ -15,6 +16,7 @@ Fraction.less Boilerplate uses code from the following projects:
 * Validate.js for client side form validation
 * Vanity JS for common jQuery plugins
 * Load.js script loader
+* Test Suite references original projects within the Usage document
 
 # Usage
 
