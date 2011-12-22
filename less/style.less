@@ -20,6 +20,12 @@
 @white: #fff;
 
 /*:::: MIXINS ::::*/
+.screen-width {
+	 display: block;
+	 width: screen-width;
+	 padding: 20px;
+ }
+
 .centered {
 	margin-left: auto;
 	margin-right: auto;
@@ -74,30 +80,37 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 15px;
+  line-height: 24px;
 }
 
 h6 {
   font-size: 18px;
+  line-height: 29px;
 }
 
 h5 {
   font-size: 22px;
+  line-height: 35px;
 }
 
 h4 {
   font-size: 26px;
+  line-height: 42px;
 }
 
 h3 {
   font-size: 30px;
+  line-height: 48px;
 }
 
 h2 {
   font-size: 34px;
+  line-height: 55px;
 }
 
 h1 {
   font-size: 36px;
+  line-height: 58px;
 }
 
 /*:::: BUTTONS ::::*/
@@ -107,6 +120,7 @@ h1 {
   padding: 10px;
   color: @white;
   .border-radius(10px);
+  border: 1px solid @white;
 }
 
 /*:::: FORMs ::::*/

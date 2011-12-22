@@ -21,6 +21,6 @@
 
 # Individual Files
 
-# .gitignore # Uncomment this in your setup
 scratch.txt
 todo.txt
+workinggrid.less
