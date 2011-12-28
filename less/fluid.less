@@ -1,0 +1,173 @@
+/**********************************************************\
+ * FRACTION.LESS FLUID GRID								  *	
+ *														  *
+ * WARNING: This is still experimental. About 80% working *
+ *														  *
+ * Now, through the power of the Less stylesheet language *
+ * you can customize an entire CSS grid by adjusting a 	  *
+ * few variables! Customize the defaults to your liking.  *
+ *														  *
+ \*********************************************************/
+
+ /*:::: GRID VARIABLES ::::*/
+
+ @full: 1140px;
+ @half: 540px;
+ @1quarter: 260px;
+ @3quarters: 840px;
+ @1third: 360px;
+ @2thirds: 720px;
+
+ /* Centers our full-width divs */
+
+ .centered {
+ 	margin-right: auto;
+ 	margin-left: auto;
+ }
+
+ /*:::: MAIN GRID LAYOUT ::::*/
+ 
+ .container {
+padding-left: 20px;
+padding-right: 20px;
+}
+ 
+ .one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
+	 margin-right: 3.8%;
+float: left;
+min-height: 1px;
+ }
+ 
+ #screen-width {
+	 display: block;
+	 width: 100%;
+	 margin-top: 25px;
+	 padding-top: 15px;
+	 padding-bottom: 15px;
+ }
+
+  .full-width {
+  	width: 100%;
+	max-width: 1140px;
+	min-width: 755px;
+	margin: 0 auto;
+	overflow: hidden;
+ 	/*
+ 	display: block;
+ 	width: @full;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	.centered;
+ 	*/
+ }
+ 
+ .one-half {
+ 	width: 48%;
+ 	/*
+ 	display: block;
+ 	width: @half;
+ 	margin-right: 20px;
+ 	*/
+ }
+ 
+ .one-third {
+ 	width: 30.75%;
+ 	/*
+ 	display: block;
+ 	width: @1third;
+ 	margin-right: 20px;
+ 	*/
+ }
+ 
+ .two-thirds {
+ 	width: 65.4%;
+ 	/*
+ 	display: block;
+ 	width: @2thirds;
+ 	margin-right: 20px;
+ 	*/
+ }
+ 
+ .one-quarter {
+ 	width: 22.05%;
+ 	/*
+ 	display: block;
+ 	width: 260px;
+ 	margin-right: 20px;
+ 	*/
+ }
+ 
+ .three-quarters {
+ 	width: 74.05%;
+ 	/*
+ 	display: block;
+ 	width: @3quarters;
+ 	margin-right: 20px;
+ 	*/
+ }
+ 
+ /*:::: NESTING ::::*/
+ 
+ .ttthirds {
+	 display: block;
+	 width: 230px;
+	 margin-right: 10px;
+ }
+
+ /*:::: FLOATS ::::*/
+ 
+ .left {
+ 	float: left;
+ }
+ 
+ .right {
+ 	float: right;
+ }
+
+ /* Last div in a row can't mess up our nice grid */
+ 
+ .last {
+ 	margin-right: 0px;
+ }
+ 
+ /*:::: EXPERIMENTAL!!! ::::*/
+ 
+ /* Smaller screens */
+
+@media only screen and (max-width: 1023px) {
+
+	body {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	}
+	
+	}
+	
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+	font-size: 16px;
+	-webkit-text-size-adjust: none;
+	}
+	
+	.full-width, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+
+}
+
+ 

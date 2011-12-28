@@ -1,0 +1,15 @@
+.centered{margin-right:auto;margin-left:auto;}
+.container{padding-left:20px;padding-right:20px;}
+.one-half,.one-quarter,.three-quarters,.one-third,.two-thirds{margin-right:3.8%;float:left;min-height:1px;}
+#screen-width{display:block;width:100%;margin-top:25px;padding-top:15px;padding-bottom:15px;}
+.full-width{width:100%;max-width:1140px;min-width:755px;margin:0 auto;overflow:hidden;}
+.one-half{width:48%;}
+.one-third{width:30.75%;}
+.two-thirds{width:65.4%;}
+.one-quarter{width:22.05%;}
+.three-quarters{width:74.05%;}
+.ttthirds{display:block;width:230px;margin-right:10px;}
+.left{float:left;}
+.right{float:right;}
+.last{margin-right:0px;}
+@media only screen and (max-width: 1023px){body{font-size:0.8em;line-height:1.5em;}}@media handheld, only screen and (max-width: 767px){body{font-size:16px;-webkit-text-size-adjust:none;} .full-width,body,.container{width:100%;min-width:0;margin-left:0px;margin-right:0px;padding-left:0px;padding-right:0px;} .one-half,.one-quarter,.three-quarters,.one-third,.two-thirds{width:auto;float:none;margin-left:0px;margin-right:0px;padding-left:20px;padding-right:20px;}}
