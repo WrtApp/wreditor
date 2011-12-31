@@ -1,15 +1,3 @@
-/****************************************************************\
- * Fraction.less RESET - Compiled from normalize.less	  	 	*	
- *														  	 	*
- * This is the compiled normalize.less file. It is recommended  *
- * that you take advantage of the built in LESS support	  		*
- * but you are free to use this regular CSS file instead. 		*
- * 														  		*
- * Please note that this file is minified. See the .less  		*
- * version for fully commented, readable, detailed code.  		*
- *														  		*
- \***************************************************************/
-
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
 audio:not([controls]){display:none;}
@@ -50,3 +38,8 @@ input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 textarea{overflow:auto;vertical-align:top;}
 table{border-collapse:collapse;border-spacing:0;}
+::selection{background:#ffff9e;}
+::-moz-selection{background:#ffff9e;}
+img::selection{background:transparent;}
+img::-moz-selection{background:transparent;}
+body{-webkit-tap-highlight-color:#ffff9e;}

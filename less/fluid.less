@@ -1,117 +1,66 @@
 /**********************************************************\
  * FRACTION.LESS FLUID GRID								  *	
  *														  *
- * WARNING: This is still experimental. About 80% working *
+ * This is the new fluid grid. Still flexible but more	  *
+ * stable. Now supports mobile!							  *
  *														  *
- * Now, through the power of the Less stylesheet language *
- * you can customize an entire CSS grid by adjusting a 	  *
- * few variables! Customize the defaults to your liking.  *
+ * WARNING: This is still experimental. About 80% working *
  *														  *
  \*********************************************************/
 
  /*:::: GRID VARIABLES ::::*/
+ 
+ @page-padding: 20px;
+ @page-margin:	3.8%;
+ @max-width:	1140px;
+ @min-width:	755px;
 
- @full: 1140px;
- @half: 540px;
- @1quarter: 260px;
- @3quarters: 840px;
- @1third: 360px;
- @2thirds: 720px;
-
- /* Centers our full-width divs */
-
- .centered {
- 	margin-right: auto;
- 	margin-left: auto;
- }
-
- /*:::: MAIN GRID LAYOUT ::::*/
+ /*:::: CONTAINERS ::::*/
  
  .container {
-padding-left: 20px;
-padding-right: 20px;
-}
+	padding-left: @page-padding;
+	padding-right: @page-padding;
+ }
  
  .one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
-	 margin-right: 3.8%;
-float: left;
-min-height: 1px;
- }
- 
- #screen-width {
-	 display: block;
-	 width: 100%;
-	 margin-top: 25px;
-	 padding-top: 15px;
-	 padding-bottom: 15px;
+	margin-right: @page-margin;
+	float: left;
+	min-height: 1px;
  }
 
-  .full-width {
+ .row {
   	width: 100%;
-	max-width: 1140px;
-	min-width: 755px;
+	max-width: @max-width;
+	min-width: @min-width;
 	margin: 0 auto;
 	overflow: hidden;
- 	/*
- 	display: block;
- 	width: @full;
- 	padding-left: 20px;
- 	padding-right: 20px;
- 	.centered;
- 	*/
  }
  
- .one-half {
+ /*:::: COLUMNS ::::*/
+ 
+ .row .one {
+	width: 100%;
+	float: left;
+ }
+ 
+ .row .one-half {
  	width: 48%;
- 	/*
- 	display: block;
- 	width: @half;
- 	margin-right: 20px;
- 	*/
  }
  
- .one-third {
+ .row .one-third {
  	width: 30.75%;
- 	/*
- 	display: block;
- 	width: @1third;
- 	margin-right: 20px;
- 	*/
  }
  
- .two-thirds {
+ .row .two-thirds {
  	width: 65.4%;
- 	/*
- 	display: block;
- 	width: @2thirds;
- 	margin-right: 20px;
- 	*/
  }
  
- .one-quarter {
+ .row .one-quarter {
  	width: 22.05%;
- 	/*
- 	display: block;
- 	width: 260px;
- 	margin-right: 20px;
- 	*/
  }
  
- .three-quarters {
+ .row .three-quarters {
  	width: 74.05%;
- 	/*
- 	display: block;
- 	width: @3quarters;
- 	margin-right: 20px;
- 	*/
- }
- 
- /*:::: NESTING ::::*/
- 
- .ttthirds {
-	 display: block;
-	 width: 230px;
-	 margin-right: 10px;
  }
 
  /*:::: FLOATS ::::*/
@@ -129,45 +78,55 @@ min-height: 1px;
  .last {
  	margin-right: 0px;
  }
- 
- /*:::: EXPERIMENTAL!!! ::::*/
- 
- /* Smaller screens */
+  
+ img, object, embed {
+	max-width: 100%;
+ }
 
-@media only screen and (max-width: 1023px) {
+img {
+	height: auto;
+ }
+
+
+/* Smaller screens */
+
+ @media only screen and (max-width: 1023px) {
 
 	body {
-	font-size: 0.8em;
-	line-height: 1.5em;
+		font-size: 0.8em;
+		line-height: 1.5em;
 	}
 	
-	}
-	
+ }
+
+
+/* Mobile */
+
 @media handheld, only screen and (max-width: 767px) {
 
 	body {
-	font-size: 16px;
-	-webkit-text-size-adjust: none;
+		font-size: 16px;
+		-webkit-text-size-adjust: none;
 	}
 	
-	.full-width, body, .container {
-	width: 100%;
-	min-width: 0;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+	.row, body, .container {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 	
-	.one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
-	width: auto;
-	float: none;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
-}
+ }
 
  
