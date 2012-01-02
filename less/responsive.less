@@ -1,12 +1,10 @@
-/**********************************************************\
- * FRACTION.LESS FLUID GRID								  *	
- *														  *
- * This is the new fluid grid. Still flexible but more	  *
- * stable. Now supports mobile!							  *
- *														  *
- * WARNING: This is still experimental. About 80% working *
- *														  *
- \*********************************************************/
+/**********************************\
+ * Fraction.less Responsive Grid  *
+ *							 	  *
+ * Author: 	Bill Patrianakos 	  *
+ * Site:	billpatrianakos.me 	  *
+ * License: BSD					  *
+\**********************************/
 
  /*:::: GRID VARIABLES ::::*/
  
@@ -21,12 +19,6 @@
 	padding-left: @page-padding;
 	padding-right: @page-padding;
  }
- 
- .one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
-	margin-right: @page-margin;
-	float: left;
-	min-height: 1px;
- }
 
  .row {
   	width: 100%;
@@ -37,8 +29,14 @@
  }
  
  /*:::: COLUMNS ::::*/
+
+ .one, .one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
+	margin-right: @page-margin;
+	float: left;
+	min-height: 1px;
+row
  
- .row .one {
+ . } .one {
 	width: 100%;
 	float: left;
  }
@@ -78,6 +76,8 @@
  .last {
  	margin-right: 0px;
  }
+
+ /*:::: RESPONSIVE IMAGES ::::*/
   
  img, object, embed {
 	max-width: 100%;
@@ -87,8 +87,7 @@ img {
 	height: auto;
  }
 
-
-/* Smaller screens */
+/*:::: SMALL SCREENS ::::*/
 
  @media only screen and (max-width: 1023px) {
 
@@ -118,7 +117,7 @@ img {
 		padding-right: 0px;
 	}
 	
-	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	.row .one-half, .row .one-third, .row .two-thirds, .row .one-quarter, .row .three-quarters, .row .one {
 		width: auto;
 		float: none;
 		margin-left: 0px;
@@ -129,4 +128,3 @@ img {
 
  }
 
- 
