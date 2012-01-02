@@ -33,10 +33,10 @@
  .one, .one-half, .one-quarter, .three-quarters, .one-third, .two-thirds {
 	margin-right: @page-margin;
 	float: left;
-	min-height: 1px;
-row
+	min-height: 1px; 
+ } 
  
- . } .one {
+ .row .one {
 	width: 100%;
 	float: left;
  }
@@ -87,73 +87,4 @@ img {
 	height: auto;
  }
 
-/*:::: MEDIA QUERIES ::::*/
-
- @media only screen and (max-width: 1023px) {
-
-	body {
-		font-size: 0.8em;
-		line-height: 1.5em;
-	}
-	
- }
-
-
-/* Mobile */
-
-@media handheld, only screen and (max-width: 767px) {
-
-	body {
-		font-size: 16px;
-		-webkit-text-size-adjust: none;
-	}
-	
-	.row, body, .container {
-		width: 100%;
-		min-width: 0;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	
-	.row .one-half, .row .one-third, .row .two-thirds, .row .one-quarter, .row .three-quarters, .row .one {
-		width: auto;
-		float: none;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
- }
- 
-/* More media queries just in case */
- 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
- 
-}
- 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
- 
-}
-
-/* Print styles */
-
-@media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-}
-
+/* MEDIA QUERIES:  See the end of style.less for media queries */
