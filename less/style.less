@@ -16,72 +16,18 @@
 	/* !!! Replace 'responsive.css' with 'grid.css' for old grid !!! */
 @import url('responsive.less');
 
+/* Import typography styles */
+@import url('type.less');
+
+/* Import LESS reuseable styles */
+@import url('effects.less');
+
 /*:::: SITE COLORS ::::*/
 
 @black: #0000;
 @white: #fff;
 
-/*:::: MIXINS ::::*/
-.screen-width {
-	 display: block;
-	 width: screen-width;
-	 padding: 20px;
- }
 
-.centered {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.border-radius (@radius: 10px) {
-	-moz-border-radius: @arguments;
-	-o-border-radius: @arguments;
-	-webkit-border-radius: @arguments;
-	border-radius: @arguments;
-}
-
-.box-shadow (@x: 0, @y: 0, @blur: 5px, @color: #fff) {
-  -o-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  -webkit-box-shadow: @arguments;
-  box-shadow: @arguments;
-}
-
-.inset-shadow (@inset: inset, @x: 0, @y: 0, @blur: 5px, @color: #fff) {
-  -o-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  -webkit-box-shadow: @arguments;
-  box-shadow: @arguments;
-}
-
-.text-shadow (@x: 0, @y: 0, @blur: 1px, @color: #fff) {
-  -o-text-shadow: @arguments;
-  -moz-text-shadow: @arguments;
-  -webkit-text-shadow: @arguments;
-  text-shadow: @arguments;
-}
-
-/* BACKGROUND GRADIENT MIXINS */
-
-.link-btn-bg {
-  
-}
-
-.link-btn-hvr {
-  
-}
-
-
-
-/*:::: BUTTONS ::::*/
-
-/* For styling links as buttons */
-.link-button {
-  padding: 10px;
-  color: @white;
-  .border-radius(10px);
-  border: 1px solid @white;
-}
 
 /*:::: FORMs ::::*/
 
@@ -143,45 +89,3 @@ input[type=submit] {
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
- 
- 
- 
-/* =============================================================================
- 
-   Use Media Queries for Responsive Design.
-   Pixel widths given as samples.
-   Edit the widths to suit where your design breaks, rather than
-   for device pixels, see 'Using a mobile-first approach': h5bp.com/w
-   ========================================================================== */
- 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
- 
-}
- 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
- 
-}
- 
- 
- 
-/* =============================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-  
-@media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-}
