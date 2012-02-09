@@ -23,15 +23,14 @@
 @white: #fff;
 
 /*:::: MIXINS ::::*/
-.screen-width {
-	 display: block;
-	 width: screen-width;
-	 padding: 20px;
- }
 
 .centered {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.centered-text {
+	text-align: center;
 }
 
 .border-radius (@radius: 10px) {
@@ -65,23 +64,30 @@
 /* BACKGROUND GRADIENT MIXINS */
 
 .link-btn-bg {
-  
+
 }
 
 .link-btn-hvr {
-  
+
 }
-
-
 
 /*:::: BUTTONS ::::*/
 
 /* For styling links as buttons */
-.link-button {
-  padding: 10px;
-  color: @white;
-  .border-radius(10px);
-  border: 1px solid @white;
+.link-button, .link-button:visited {
+  padding: 6px 10px 6px 10px;
+  color: @black;
+  .link-btn-bg;
+  .border-radius(6px);
+  .inset-shadow(inset, 0, 1px, 0, @white); /* Gives your button a "shiny"/"candy" effect */
+  border: 1px solid @black; /* Color should be set to the darkest shade of your button gradient for best effect */
+}
+
+.link-button:hover {
+	.link-btn-hvr;
+	color: ;
+	.inset-shadow(inset, 0, 1px, 0, @white); /* Same rules apply as above for appearance of hovered buttons */
+	border: 1px solid @black;
 }
 
 /*:::: FORMs ::::*/
@@ -100,6 +106,86 @@ input[type=submit] {
 
 /*:::: TYPOGRAPHY ::::*/
 
+h1:first-child, h2:first-child, h3:first-child, h4:first-child {
+	margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+	font-family: Helvetica, Tahoma, sans-serif;
+  	font-weight: 600;
+  	color: @black;
+  	.text-shadow(0, 1px, 1px, @white);
+}
+
+h1, h2, h3, h4 {
+	margin-top: 18px;
+}
+
+h3, h4, h5, h6 { 
+	line-height: 18px;
+}
+
+h1, h2 {
+	line-height: 36px; 
+	margin-bottom: 18px;
+}
+
+
+
+p, pre, address {
+	font-size: 13px;
+	line-height: 18px;
+	position: relative;
+	top: 5px;
+	font-family: Helvetica, Tahoma, sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+h6 {
+  font-size: 13px;
+  top: 5px
+}
+
+h5 {
+  font-size: 15px;
+  top: 4px;
+}
+
+h4 {
+  font-size: 18px;
+  top: 2px;
+}
+
+h3 {
+	font-size: 22px;
+	top: 1px;
+}
+
+h2 {
+  font-size: 28px;
+  top: 8px;
+}
+
+h1 {
+  font-size: 36px;
+  top: 5px;
+}
+
+a, a:visited {
+	color: ;
+}
+
+a:focus, a:hover {
+	color: ;
+}
+
+.secondary p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
 /* Baseline typography variables */
 
 @line: 24;
@@ -107,27 +193,7 @@ input[type=submit] {
 @font-size: 16;
 @em:@font-size*1em;
 
-/* Typography styles */
-
-body {
-	/* 16px / 24px */
-	font-size: @font-size / 16 * 1em; 
-	line-height: @line / @em;
-}
-
-.small {
-	/* 13px / 18px */
-	font-size: (@font-size*0.8125) / @em;
-	line-height: (@line*0.75) / (@font-size*0.8125) * 1em;
-}
-
-.normal, h3 {
-	/* 16px / 24px */
-	font-size: @font-size / @em;
-	line-height: @line / @em; /* 24 */
-}
-
-.large, h2, h1 {
+.large {
 	/* 26 / 36px */
 	font-size: 26 / @em;
 	line-height: (@line*1.5) / 26 * 1em;
@@ -200,14 +266,16 @@ body {
 
 /*:::: MEDIA QUERIES ::::*/
 
- @media only screen and (max-width: 1023px) {
+/* Smaller screens */
+
+@media only screen and (max-width: 1023px) {
 
 	body {
-		font-size: 0.8em;
-		line-height: 1.5em;
+	font-size: 0.8em;
+	line-height: 1.5em;
 	}
 	
- }
+	}
 
 
 /* Mobile */
@@ -215,41 +283,53 @@ body {
 @media handheld, only screen and (max-width: 767px) {
 
 	body {
-		font-size: 16px;
-		-webkit-text-size-adjust: none;
+	font-size: 16px;
+	-webkit-text-size-adjust: none;
 	}
 	
 	.row, body, .container {
-		width: 100%;
-		min-width: 0;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 	}
 	
-	.row .one-half, .row .one-third, .row .two-thirds, .row .one-quarter, .row .three-quarters, .row .one {
-		width: auto;
-		float: none;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 20px;
-		padding-right: 20px;
+	.row .one, .row .two, .row .three, .row .four, .row .five, .row .six, .row .seven, .row .eight, .row .nine, .row .ten, .row .eleven, .row .twelve {
+	width: auto;
+	float: none;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
 	}
 
- }
- 
-/* More media queries just in case */
- 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
- 
 }
- 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
- 
-}
+
+/* Extra queries just in case... */
+
+
+
+/*@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}*/
+
+
+/* Hi-Res images for iPhone4 */
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+/*}*/
 
 /* Print styles */
 
