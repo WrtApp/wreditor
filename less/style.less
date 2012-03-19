@@ -75,17 +75,19 @@
 
 /* For styling links as buttons */
 .link-button, .link-button:visited {
-  padding: 6px 10px 6px 10px;
+  padding: 6px 10px;
   color: @black;
   .link-btn-bg;
   .border-radius(6px);
   .inset-shadow(inset, 0, 1px, 0, @white); /* Gives your button a "shiny"/"candy" effect */
+  .text-shadow(0, -1px, 1px, @black);
   border: 1px solid @black; /* Color should be set to the darkest shade of your button gradient for best effect */
+  white-space: nowrap;
 }
 
 .link-button:hover {
 	.link-btn-hvr;
-	color: ;
+	color: @white;
 	.inset-shadow(inset, 0, 1px, 0, @white); /* Same rules apply as above for appearance of hovered buttons */
 	border: 1px solid @black;
 }
@@ -186,7 +188,7 @@ a:focus, a:hover {
 	line-height: 20px;
 }
 
-/* Baseline typography variables */
+/* Baseline typography variables for special Type classes */
 
 @line: 24;
 @column: 100% / 18;

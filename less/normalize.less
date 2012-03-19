@@ -6,6 +6,13 @@
  * for normalize.css documentation.                   *
 \******************************************************/
 
+/*:::: DEFAULT COLOR SETTINGS ::::*/
+
+@mark-bg: #ff0;
+@mark-text: #000;
+@text-highlight: ;
+@image-highlight: ;
+
 
 /*:::: HTML5 DISPLAY DEFINITIONS ::::*/
 
@@ -92,8 +99,8 @@ dfn {
 }
 
 mark {
-    background: #ff0;
-    color: #000;
+    background: @mark-bg;
+    color: @mark-text;
 }
 
 pre,
@@ -259,19 +266,11 @@ table {
 
 /*:::: TEXT SELECTION COLORS ::::*/
 
-::selection	{
+::selection, ::-moz-selection {
 	background: rgb(255,255,158);
 }
 
-::-moz-selection {
-	background: rgb(255,255,158);
-}
-
-img::selection {
-	background: transparent;
-}
-
-img::-moz-selection	{
+img::selection, img::-moz-selection {
 	background: transparent;
 }
 
