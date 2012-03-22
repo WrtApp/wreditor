@@ -2,7 +2,7 @@
  * Fraction.less Main Stylesheet  *
  *                                *
  * Author:  Bill Patrianakos      *
- * Site:  billpatrianakos.me      *
+ * Site:  	billpatrianakos.me    *
  * License: BSD                   *
 \**********************************/
 
@@ -12,9 +12,10 @@
 @import url('normalize.less');
 
 /* Grid Framework */
-
-	/* !!! Replace 'responsive.css' with 'grid.css' for old grid !!! */
 @import url('12col.less');
+
+/* Typography */
+@import url('type.less');
 
 
 /*:::: SITE COLORS ::::*/
@@ -106,118 +107,6 @@ input[type=submit] {
   
 }
 
-/*:::: TYPOGRAPHY ::::*/
-
-h1:first-child, h2:first-child, h3:first-child, h4:first-child {
-	margin-top: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	position: relative;
-	font-family: Helvetica, Tahoma, sans-serif;
-  	font-weight: 600;
-  	color: @black;
-  	.text-shadow(0, 1px, 1px, @white);
-}
-
-h1, h2, h3, h4 {
-	margin-top: 18px;
-}
-
-h3, h4, h5, h6 { 
-	line-height: 18px;
-}
-
-h1, h2 {
-	line-height: 36px; 
-	margin-bottom: 18px;
-}
-
-
-
-p, pre, address {
-	font-size: 13px;
-	line-height: 18px;
-	position: relative;
-	top: 5px;
-	font-family: Helvetica, Tahoma, sans-serif;
-	font-size: 15px;
-	line-height: 24px;
-}
-
-h6 {
-  font-size: 13px;
-  top: 5px
-}
-
-h5 {
-  font-size: 15px;
-  top: 4px;
-}
-
-h4 {
-  font-size: 18px;
-  top: 2px;
-}
-
-h3 {
-	font-size: 22px;
-	top: 1px;
-}
-
-h2 {
-  font-size: 28px;
-  top: 8px;
-}
-
-h1 {
-  font-size: 36px;
-  top: 5px;
-}
-
-a, a:visited {
-	color: ;
-}
-
-a:focus, a:hover {
-	color: ;
-}
-
-.secondary p {
-	font-size: 14px;
-	line-height: 20px;
-}
-
-/* Baseline typography variables for special Type classes */
-
-@line: 24;
-@column: 100% / 18;
-@font-size: 16;
-@em:@font-size*1em;
-
-.large {
-	/* 26 / 36px */
-	font-size: 26 / @em;
-	line-height: (@line*1.5) / 26 * 1em;
-}
-
-.huge {
-	/* 42px / 48px */
-	font-size: 42 / @em;
-	line-height: (@line*2) / 42 * 1em;
-}
-
-.massive {
-	/* 68px / 72px */
-	font-size: 68 / @em;
-	line-height: (@line*3) / 68 * 1em;
-}
-
-.gigantic {
-	/* 110px / 120px */
-	font-size: 110 / @em;
-	line-height: (@line*5) / 110 * 1em;
-}
 
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
