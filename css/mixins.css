@@ -1,0 +1,8 @@
+/*:::: MIXINS ::::*/
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.centered-text {
+  text-align: center;
+}
