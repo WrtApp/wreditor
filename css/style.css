@@ -362,7 +362,7 @@ embed {
 img {
   height: auto;
 }
-/* !! MEDIA QUERIES ARE AT THE BOTTOM OF 'style.less' !! *//* Typography */
+/* !! MEDIA QUERIES ARE AT THE BOTTOM OF 'style.less' - LEAVE THEM THERE FOR GOOD REASON !! *//* Typography */
 /*:::: TYPOGRAPHY ::::*/
 h1:first-child,
 h2:first-child,
@@ -406,14 +406,14 @@ h2 {
 }
 p,
 pre,
-address {
+address,
+li,
+label {
   font-size: 13px;
   line-height: 18px;
   position: relative;
   top: 5px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 24px;
   -o-text-shadow: 0 1px 1px #f7f7f7;
   -moz-text-shadow: 0 1px 1px #f7f7f7;
   -ms-text-shadow: 0 1px 1px #f7f7f7;
