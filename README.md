@@ -47,23 +47,25 @@ Next, use `.row` which will create an 1140px row in which you can put up to 12 c
 Then, within your `.row`s you'll add columns. Column class names are just the number of columns they span. So within your row you can have any combination of columns like this:
 
 ```html
-<div class="row">
-	<div class="three">
-		<p>My three column content</p>
-	</div>
+<section class="container">
+	<div class="row">
+		<div class="three">
+			<p>My three column content</p>
+		</div>
 
-	<div class="two">
-		<p>My two column content</p>
-	</div>
+		<div class="two">
+			<p>My two column content</p>
+		</div>
 
-	<div class="four">
-		<p>My four column content</p>
-	</div>
+		<div class="four">
+			<p>My four column content</p>
+		</div>
 
-	<div class="three last">
-		<p>My last column, which spans 3 columns and is the last in the row which adds up to 12</p>
+		<div class="three last">
+			<p>My last column, which spans 3 columns and is the last in the row which adds up to 12</p>
+		</div>
 	</div>
-</div>
+</section>
 ```
 
 The important things to notice here is that the column class names should **always** add up to 12 and that the very last column in a row needs to additionally have the `.last` class added to it or the layuot will fail to render properly. For those who have never seen an element with multiple classes, don't worry. It is perfectly acceptible to have multiple classes on the same HTML element. In fact, you can have as many as you want separated by spaces. It is not invalid markup at all. That said, its generally not a good idea to have elements with multiple classes everywhere unless its absolutely necessary. Best practices dictate only one class per element but it is not at all uncommon to see multiple classes per element. Just don't go crazy with this if this is a new concept to you.
