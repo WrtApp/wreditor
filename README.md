@@ -1,6 +1,6 @@
 # Fraction.less Boilerplate
 
-## Now at version 1.2!
+## Now at version 1.9 (with Font Awesome 3.0 included)!
 
 Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
 
@@ -88,7 +88,13 @@ We've included `less.js` for those who want to save compiling for later or want 
 
 #### Less.app
 
-This version of Fraction.less no longer includes Less.app. Less.app is great but this is a design framework and I'm trying to focus the project more. You can find a LESS compiler on your own (I use CodeKit by the same developer as Less.app. It's great!). On Linux I use the Node package which is installed via NPM. But like I said, just Google around. LESS compilers are not hard to come by.
+This version of Fraction.less no longer includes [Less.app](http://incident57.com/less/). Less.app is great but this is a design framework and I'm trying to focus the project more. You can find a LESS compiler on your own (I use [CodeKit](http://incident57.com/codekit/) by the same developer as Less.app. It's great!). On Linux I use the Node package which is installed via NPM. But like I said, just Google around. LESS compilers are not hard to come by. Here are some good ones:
+
+* [Less.app](http://incident57.com/less/) (Mac only)
+* [CodeKit](http://incident57.com/codekit/) (Mac only)
+* [Crunch](http://crunchapp.net/) (Win/Mac)
+* [SimpleLESS](http://wearekiss.com/simpless) (Win/Mac/Linux)
+* [Less Parser](http://www.proving-ground.be/less/) (Windows only - Basically a cloned version of LESS.app for Windows with permission from the original creator of LESS.app)
 
 ### Usage Notes
 
