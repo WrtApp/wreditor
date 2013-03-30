@@ -1,6 +1,6 @@
 # License (BSD)
 
-Copyright (c) 2011 Bill Patrianakos
+Copyright (c) 2011 - 2013 Bill Patrianakos
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
