@@ -1,12 +1,28 @@
-# Fraction.less Boilerplate v2.0b
+# Fraction.less Boilerplate v2.0.0
 
-Fraction.less is an HTML5/CSS3 quick-start kit meant to get sites or web apps designed and developed quickly. Using the grid classes lets you create a page layout in no more than a couple of minutes!
+Fraction.less is an HTML/CSS quick-start kit to get your website or app front-end up and running quickly. It's HTML5 ready, utilizes backwards compatible CSS3, comes with a bunch of useful and common JavaScript functionality, and it has LESS and SASS support if you want it.
 
-Fraction.less comes with a simple, solid, *responsive* grid system, some common boilerplate styling, common jQuery plugin starting points (sliders, accordions, etc.), just enough HTML5 boilerplate, and, best of all, it uses LESS.
+__Why use it?__
 
-I've tried to make this as flexible as possible while still providing a really comprehensive baseline for design and development. You may think Fraction.less is bloated in some areas and lacking in others. That's okay. The biggest challenge in creating a boilerplate/framework (whatever you want to call it) is loading it up with a comprehensive set of tools that encourage best practices without creating a bloated framework that people end up spending a lot of time removing stuff from up front.
+Unlike most other frameworks, you'll spend most of your time building on top of Fraction.less rather than undoing the defaults. Also, unlike some other frameworks, sites built using Fraction.less won't *look* like they were built using Fraction.less. The framework gives you a great set of minimal defaults and doesn't allows you to build sites that are your own without having to unravel a lot of complicated, hard to customize code.
 
-If you have any ideas or suggestions for how to improve Fraction.less shoot me an email at __bill [at] chooseclever.com__. And please, use this, fork it, submit pull requests. I'm happy to give support to anyone who needs it and to include ideas from others.
+## Features
+
+* Common styles for
+	* Site-wide color scheme
+	* Forms
+	* Responsive grid
+	* Helper classes (think image replacement, hidden elements, etc.)
+	* Helful LESS and SASS mixins
+	* Media query starting points
+	* Comprehensive CSS reset thanks to Normalize.css
+	* Optimized print styles
+	* Baseline typographic grid
+* Common JavaScript functions (accordions, tabs, etc.)
+	* The latest jQuery
+* HTML5 starting point
+* Icon font (latest Font-Awesome)
+* Various optimizations (robots.txt, humans.txt, .htaccess, crossdomain policy, etc.)
 
 ## Components
 
@@ -15,6 +31,7 @@ Fraction.less Boilerplate uses code from the following projects:
 * jQuery 1.9.1
 * Normalize.css CSS 'reset'
 * LESS CSS stylesheet language
+* SASS support (__New!__)
 * Parsley.js for client side form validation
 * Vanity JS for common JS effects
 * Test Suite references original projects within the Usage document
@@ -25,9 +42,12 @@ Setup is pretty easy and Fraction.less comes with some tools to help you test yo
 
 ## Initial Setup
 
-Download and extract the files to where you want to start developing or do a
+1. Download and extract the files to where you want to start developing or do a
     git clone git://github.com/billpatrianakos/Fractionless-Boilerplate.git
 
+2. Set your favorite LESS or SASS compiler to watch the project folder (or use `less.js` client side)
+
+3. Open up the folder in your favorite editor and start editing!
 
 ## The Grid
 
@@ -37,11 +57,13 @@ The Fraction.less grid is based on the 1140 Grid System. It works out of the box
 
 Basically, its like creating a layout with tables except without any tables. Your `<body>` is the canvas on which you create your grid.
 
-You'll need to add the `.container` class to at least one element to start. This will become a container that holds your grid. It centers your elements and allows you to give an element a full screen-width background no matter how wide the browser window is while keeping your content at a max width of 1140px. I usually use `.container` to separate logical sections of my pages like the header, main content area, and footer and sometimes I use it to give different parts of pages different color backgrounds.
+1. `.container` - This contains your rows and columns. Parts of your page like the header, main content, and footer lend themselves well to being containers. No content goes in the `.container` - only `.rows` do. This class spans the width of the browser window.
 
-Next, use `.row` which will create an 1140px row in which you can put up to 12 columns in horizontally. You can have as many `.row`s as you want within a container and you can even nest rows within columns. If you add a background to a `.row` you'll notice it only spans a maximum width of 1140px.
+2. `.row` - This is is the holder for your columns. Again, no content goes in them, only your columns. You can place as many rows as you want within your `.container`. This class spans 1140px by default or any width you define in `.grid.less` or `grid.scss` and is always centered in the browser window.
 
-Then, within your `.row`s you'll add columns. Column class names are just the number of columns they span. So within your row you can have any combination of columns like this:
+3. The `.one` through `.twelve` classes are your columns. That's where your content goes. The grid supports twelve columns. The elements in your `.row` should add up to 12 with the last column in your `.row` having a `.last` class.
+
+__Example:__
 
 ```html
 <section class="container">
@@ -65,23 +87,21 @@ Then, within your `.row`s you'll add columns. Column class names are just the nu
 </section>
 ```
 
-The important things to notice here is that the column class names should **always** add up to 12 and that the very last column in a row needs to additionally have the `.last` class added to it or the layuot will fail to render properly. For those who have never seen an element with multiple classes, don't worry. It is perfectly acceptible to have multiple classes on the same HTML element. In fact, you can have as many as you want separated by spaces. It is not invalid markup at all. That said, its generally not a good idea to have elements with multiple classes everywhere unless its absolutely necessary. Best practices dictate only one class per element but it is not at all uncommon to see multiple classes per element. Just don't go crazy with this if this is a new concept to you.
+The important things to notice here is that the column class names should **always** add up to 12 and that the very last column in a row needs to have the `.last` class added to it or the last element will fail to float properly. For those who have never seen an element with multiple classes, don't worry. It is perfectly acceptible to have multiple classes on the same HTML element. In fact, you can have as many as you want separated by spaces. It is not invalid markup at all. That said, its generally not a good idea to have elements with multiple classes everywhere unless its absolutely necessary. Best practices dictate only one class per element but it is not at all uncommon to see multiple classes per element. Just don't go crazy with this if this is a new concept to you.
 
-Users of verion 1.0 will remember the `.full-width`, `.left`, `.right`, and column classes named after fractions. Those are gone and replaced with the new class names. If you've been using verion 1 please update your grid and restructure your HTML to align with the new grid (it really isn't that hard, I had to do it a few times myself - it just requires a quick find and replace and the addition of the `.row` element). The new grid is far more reliable, easy, and gives you a *working* responsive design.
+## Legacy support
 
-### style.less
+Users of verion 1.0 will remember the `.full-width`, `.left`, `.right`, and column classes named after fractions. Those are gone and replaced with the new class names. If you've been using verion 1 please update your grid and restructure your HTML to align with the new grid (it really isn't that hard, I had to do it a few times myself - it just requires a quick find and replace and the addition of the `.row` element). The new grid is far more reliable, easy, and gives you a *working* responsive design. The `.left` and `.right` classes still remain but are now part of the `mixins` file and used to quickly float an element left or right.
 
-This is your main stylesheet. It imports the colors, grid, normalize.css (CSS reset), and other required files. Its best not to compile any of the LESS files except for `style.less` because each LESS file has dependencies upon the others. `style.less` will automatically import the other LESS files, and the resulting file will include the code from all the files in one single file, `style.css`. Please keep the order of imports in `style.less` the same as it is. Each successive file in the list depends on the successful compilation of the last for `style.less` to successfully compile. Changing the order of these files will cause compiles to fail. Feel free to add imports of your own making to the list, however.
+### style.less and style.scss
 
-__For those who have various problems with LESS__
+This file imports all of the styles besides your custom styles. The order of imports in these files is very important as each file may depend on variables or mixins defined in the previous file. Add your styles below the first set of imports (as indicated in the file) but not before the last set of imports for print and mobile styles.
 
-You have three options:
+If using a compiler, you only need to compile the `style.*` file as your compiler should import and compile all included files into a single `style.css` file. If you're using plain CSS it's best to avoid all the `@import` statements and manually copy and paste each file into `style.css` manually to avoid too many HTTP requests from slowing down your site.
 
-* Use the precompiled CSS files (which is a pain because they're minified)
-* Use `style.less` with already-compiled CSS files like `normalize.css` and the others
-* Use the LESS files as-is without compiling them (allows you to either write LESS and use the code without compiling or lets you write normal CSS within the LESS files and still have them run)
+__Using LESS without a compiler__
 
-We've included `less.js` for those who want to save compiling for later or want a quick way to experiment with Less. If you don't know much about LESS and want Fraction.less to work out of the box, just uncomment the line in the `index.html` file that has a `<link>` to the `less.js` file. This will solve most problems all three types of people above may have. *Please don't use `less.js` in production. On a live website it forces you to rely on JavaScript browser support AND slows page load times.*
+Fraction.less includes `less.js` for those who want to save compiling for later or want a quick way to experiment with Less. If you don't know much about LESS and want Fraction.less to work out of the box, just uncomment the line in the `index.html` file that has a `<link>` to the `less.js` file. This will solve most problems all three types of people above may have. *Please don't use `less.js` in production. On a live website it forces you to rely on JavaScript browser support AND slows page load times on many levels.*
 
 #### Less.app
 
@@ -97,11 +117,11 @@ Fraction.less no longer includes [Less.app](http://incident57.com/less/). Less.a
 
 Take heed of the following as there are some components of the boilerplate that need a bit of extra attention to work correctly.
 
-_.htaccess Files_ - Fraction.less comes with a file named `bootstrap.htaccess`. On many systems hidden files are not included when pressing `Ctrl + A` then `Ctrl + C` to copy files between folders. To ensure this important file gets included in that situation we've named it. For it to work correctly you must rename it to simply `.htaccess`.
+_.htaccess Files_ - Fraction.less comes with a file named `bootstrap.htaccess`. On most systems hidden files are not shown in the GUI file explorers like Finder or Windows Explorer. This means that if you download Fraction.less and try to copy and paste its contents to another folder you'll most likely not get the `.gitignore` and `.htaccess` file along with the rest of the files. To ensure this important file gets included in that situation we've named it so it isn't a dot-file. For it to work correctly in production you must rename it to simply `.htaccess`.
 
 ### Credits
 
-I have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I.
+I have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I, and whose projects I've used extensively in the creation of Fraction.less.
 
 * [Paul Irish and the HTML5 Boilerplate team](http://html5boilerplate.com) - HTML5 Boilerplate
 * [@andytlr](http://cssgrid.net) - 1140 Grid System
@@ -119,12 +139,7 @@ Fraction.less Boilerplate is licensed under the BSD license. See the License.md 
 
 The following features will be implemented in upcoming releases:
 
-* Add a basic favicon and apple touch icons __Implemented__
-* Alternate/improved/better/new dependency management like YepNope.js *Abandoned*
-* Basic mailto script (Is this necessary?) *Abandoned*
+* Better SASS support
 * Build scripts and optimizers
-* Benchmarking tests
-* Prettier 404 __Implemented__
-* General optimizations everywhere and time-savers __Implemented__
 
-Contributors and suggetions welcome! bill-at-chooseclever-dot-com
+Contributors and suggetions welcome! bill-at-chooseclever-dot-com if you need to reach me but I'd much prefer it if you just created an issue or files a pull request in most cases. I'm very very happy to include others' contributions.
