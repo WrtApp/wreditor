@@ -1,13 +1,5 @@
 /*:::: Typography ::::*/
 
-// Your default headline font stack and font weight
-@headline-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@headline-weight: bold; // Usually 700 for webfonts
-
-// Your regular text font and weight
-@text-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@text-weight: normal; // Usually 400 for webfonts
-
 body {
 	font-size: 75%;
 	line-height: 1.5;
@@ -15,9 +7,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	position: relative;
-	font-family: @headline-font;
-	font-weight: @headline-weight;
-	color: @headline;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #202020;
 }
 
 h1, h2 {
@@ -68,8 +60,8 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child {
 }
 
 p, pre, address {
-	font-family: @text-font;
-	font-weight: @text-weight;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.5em;
 	position: relative;
@@ -86,14 +78,14 @@ abbr, code, kbd, samp, small, var {
 }
 
 ul, ol, dl, dialog {
-	font-family: @text-font;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
 	position: relative;
 	top: 5px;
 	margin-top: 18px;
 	margin-bottom: 18px;
-	color: @bodytype;
+	color: #505050;
 }
 
 li ul, li ol, ul ul, ol ol {
@@ -107,18 +99,18 @@ li h1, li h2, li h3, li h4, li h5, li h6, li p {
 }
 
 a {
-	color: @link;
+	color: #0A457D;
 	text-decoration: none;
 }
 
 a:visited {
-	color: @vlink;
+	color: #095B90;
 }
 
 a:hover {
-	color: @hlink;
+	color: #2E75AD;
 }
 
 strong {
-	font-weight: @text-weight;
+	font-weight: normal;
 }
