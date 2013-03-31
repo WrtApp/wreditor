@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Oh no! We have a code 404. Sound the alarm!</title>
-
+		<meta charset="utf-8">
+		<title>Page not found (404)</title>
 		<!--
 			Since this is a 404, we're going to assume all resources are disconnected somehow so we inline all the styles. This is how I do it sometimes to account for huge site-wide changes that would even affect any styles connected to my 404 page.
 		-->
@@ -10,70 +10,89 @@
 			body {
 				width: 100%;
 				min-height: 100%; /* To keep short pages from looking funny */
-				background: #AEAEAE;
-				color: #242424;
-				-o-text-shadow: 0, 1px, 1px, #F5F5F5;
-				-moz-text-shadow: 0, 1px, 1px, #F5F5F5;
-				-webkit-text-shadow: 0, 1px, 1px, #F5F5F5;
-				text-shadow: 0, 1px, 1px, #F5F5F5;
+				background: #fafafa;
+				color: #272727;
+				padding-top: 60px;
 			}
 
 			#container {
+				width: 100%;
 				display: block;
-				width: 960px;
-				margin-left: auto;
-				margin-right: auto;
+				margin: auto;
 			}
 
-			header {
-				font-family: 'Georgia', 'Times New Romain', serif;
-				background: #9EAED9;
+			.row {
+				width: 600px;
+				padding: 20px;
+				background: #fff;
+				display: block;
+				margin: auto;
+				border: 1px solid #888888;
+			}
+
+			h1 {
+				font-size: 50px;
+				line-height: 1em;
+			}
+
+			h1, h2 {
+				color: #202020;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-weight: bold;
 				text-align: center;
-				padding: 35px;
+				line-height: 1em;
 			}
 
-			.main {
-				background: #C7C8BB;
-				font-family: Helvetica, 'Dejavu Sans', Arial, sans-serif;
-				padding: 35px;
-			}
-
-			footer {
-				background: #242424;
-				color: #F5F5F5;
-				padding: 35px;
-				-o-text-shadow: 0, 1px, 1px, #AEAEAE;
-				-moz-text-shadow: 0, 1px, 1px, #AEAEAE;
-				-webkit-text-shadow: 0, 1px, 1px, #AEAEAE;
-				text-shadow: 0, 1px, 1px, #AEAEAE;
+			p {
+				color: #505050;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				line-height: 1.5em;
 				text-align: center;
 			}
 
-			a {
-				color: #9EAED9;
-				-o-text-shadow: 0, 1px, 1px, #F5F5F5;
-				-moz-text-shadow: 0, 1px, 1px, #F5F5F5;
-				-webkit-text-shadow: 0, 1px, 1px, #F5F5F5;
-				text-shadow: 0, 1px, 1px, #F5F5F5;
+			ul {
+				width: 150px;
+				display: block;
+				margin: auto;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+
+			a, a:visited, a:active {
+				background: #2E75AD;
+				-o-border-radius: 3px;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				color: #fff;
+				font-size: 18px;
+				font-weight: bold;
+				padding: 6px 18px;
+				text-decoration: none;
+			}
+
+			a:hover {
+				-o-text-shadow: 0 1px 1px #0A457D;
+				-moz-text-shadow: 0 1px 1px #0A457D;
+				-webkit-text-shadow: 0 1px 1px #0A457D;
+				text-shadow: 0 1px 1px #0A457D;
 			}
 		</style>
 	</head>
 <body>
 
 	<div id="container">
-		<header>
-			<h1>Four, oh, four...</h1>
+		<div class="row">
+			<h1>404</h1>
 			<h2>Page not found</h2>
-		</header>
-		<section class="main">
-			<p>
-			Looks like you dropped the ball and typed in a wrong address. Or maybe we moved, deleted, or made some huge mistake with the page. Either way, there's no sense blaming anyone. We're sorry, but this page just couldn't be found. Try refreshing the page or check out one of our other pages. We have a ton of way cooler ones on this site.
-			</p>
-		</section>
-		<footer>
-			<h3>How about these pages instead?</h3>
-			<p>Put a mini sitemap here</p>
-		</footer>
+			<p>Sorry, but the page you were trying to view does not exist.</p>
+			<p>It looks like this was the result of either:</p>
+			<ul>
+				<li>a mistyped address</li>
+				<li>an out-of-date link</li>
+			</ul>
+			<p><a href="/">Go Back</a></p>
+		</div>
 	</div>
 
 </body>
