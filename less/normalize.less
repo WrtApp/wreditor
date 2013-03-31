@@ -119,9 +119,17 @@ dfn {
 }
 
 hr {
+	/* First, we reset the hr */
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0;
+	/* Then we customize and prettify it. Why declare it twice, right? */
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 mark {
@@ -323,16 +331,6 @@ table {
 ::selection {
 	background: @text-select;
 	text-shadow: none;
-}
-
-/* A nice looking <hr /> */
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
 }
 
 /* Remove the gap between images and the bottom of their containers */

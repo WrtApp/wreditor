@@ -1,5 +1,3 @@
-# License (BSD)
-
 Copyright (c) 2011 - 2013 Bill Patrianakos
 All rights reserved.
 

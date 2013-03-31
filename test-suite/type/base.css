@@ -1,0 +1,37 @@
+body {
+	width: 100%;
+	min-height: 100%; /* To keep short pages from looking funny */
+	background: #fafafa;
+	color: #272727;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+#container {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.row {
+	width: 600px;
+	padding: 20px;
+	background: #fff;
+	display: block;
+	margin: auto;
+	border: 1px solid #888888;
+}
+
+hr {
+	/* First, we reset the hr */
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+	/* Then we customize and prettify it. Why declare it twice, right? */
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
