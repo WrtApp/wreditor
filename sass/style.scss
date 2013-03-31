@@ -1,0 +1,18 @@
+/*:::: Main Stylesheet ::::*/
+
+@import "grid"; 			// Grid system
+@import "colors"; 			// Site-wide colors
+@import "mixins"; 			// Mixins
+@import "normalize"; 		// CSS reset
+@import "type"; 			// Typography
+@import "font-awesome"; 	// Iconography
+@import "forms"; 			// Form styles
+
+/*:::: YOUR STYLES HERE ::::*/
+
+
+
+/*:::: No styles below this line ::::*/
+@import "helpers"; 			// Helper classes
+@import "mobile"; 			// Media queries for mobile
+@import "print"; 			// Print styles

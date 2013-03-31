@@ -1,0 +1,73 @@
+/*:::: FORMS ::::*/
+
+label {
+
+}
+
+/* TEXT AREAS - normal, focus, hover */
+textarea {
+	resize: vertical;
+}
+
+textarea:focus {
+
+}
+
+textarea:hover {
+
+}
+
+select {
+
+}
+
+/* TEXT INPUTS - normal, focus, active, hover */
+input[type=text], input[type=email], input[type=password] {
+
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+
+}
+
+input[type=text]:active, input[type=email]:active, input[type=password]:active {
+
+}
+
+input[type=text]:hover, input[type=email]:hover, input[type=password]:hover {
+
+}
+
+/* CHECK BOXES - normal, focus, active, hover */
+input[type=checkbox] {
+
+}
+
+input[type=checkbox]:focus {
+
+}
+
+input[type=checkbox]:active {
+
+}
+
+input[type=checkbox]:hover {
+
+}
+
+/* SUBMIT & REGULAR BUTTONS - normal, focus, active, hover */
+input[type=submit], button {
+
+}
+
+input[type=submit]:focus, button:focus {
+
+}
+
+input[type=submit]:active, button:active {
+
+}
+
+input[type=submit]:hover, button:hover {
+
+}

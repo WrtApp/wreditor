@@ -1,0 +1,152 @@
+/*:::: Mixins ::::*/
+
+/* Center elements or text */
+@mixin centered ($display: block, $width: 100%) {
+	display: $display;
+	width: $width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin centered-text {
+	text-align: center;
+}
+
+/* Shadow mixins */
+@mixin box-shadow ($x: 0, $y: 0, $blur: 3px, $color: #000) {
+	-o-box-shadow: $arguments;
+	-moz-box-shadow: $arguments;
+	-ms-box-shadow: $arguments;
+	-khtml-box-shadow: $arguments;
+	-webkit-box-shadow: $arguments;
+	box-shadow: $arguments;
+}
+
+@mixin inset-shadow ($inset: inset, $x: 0, $y: 0, $blur: 3px, $color: #000) {
+	-o-box-shadow: $arguments;
+	-moz-box-shadow: $arguments;
+	-ms-box-shadow: $arguments;
+	-khtml-box-shadow: $arguments;
+	-webkit-box-shadow: $arguments;
+	box-shadow: $arguments;
+}
+
+@mixin text-shadow ($x: 0, $y: 0, $blur: 1px, $color: #000) {
+	-o-text-shadow: $arguments;
+	-moz-text-shadow: $arguments;
+	-ms-text-shadow: $arguments;
+	-khtml-text-shadow: $arguments;
+	-webkit-text-shadow: $arguments;
+	text-shadow: $arguments;
+}
+
+/* Border radius mixins */
+@mixin border-radius ($radius: 6px) {
+	-moz-border-radius: $arguments;
+	-o-border-radius: $arguments;
+	-ms-border-radius: $arguments;
+	-khtml-border-radius: $arguments;
+	-webkit-border-radius: $arguments;
+	border-radius: $arguments;
+}
+
+@mixin top-borders ($radius: 6px) {
+	-moz-border-top-left-radius: $arguments;
+	-o-border-top-left-radius: $arguments;
+	-ms-border-top-left-radius: $arguments;
+	-khtml-border-top-left-radius: $arguments;
+	-webkit-border-top-left-radius: $arguments;
+	border-top-left-radius: $arguments;
+	-moz-border-top-right-radius: $arguments;
+	-o-border-top-right-radius: $arguments;
+	-ms-border-top-right-radius: $arguments;
+	-khtml-border-top-right-radius: $arguments;
+	-webkit-border-top-right-radius: $arguments;
+	border-top-right-radius: $arguments;
+}
+
+@mixin bottom-borders ($radius: 6px) {
+	-moz-border-bottom-left-radius: $arguments;
+	-o-border-bottom-left-radius: $arguments;
+	-ms-border-bottom-left-radius: $arguments;
+	-khtml-border-bottom-left-radius: $arguments;
+	-webkit-border-bottom-left-radius: $arguments;
+	border-bottom-left-radius: $arguments;
+	-moz-border-bottom-right-radius: $arguments;
+	-o-border-bottom-right-radius: $arguments;
+	-ms-border-bottom-right-radius: $arguments;
+	-khtml-border-bottom-right-radius: $arguments;
+	-webkit-border-bottom-right-radius: $arguments;
+	border-bottom-right-radius: $arguments;
+}
+
+@mixin left-borders ($radius: 6px) {
+	-moz-border-bottom-left-radius: $arguments;
+	-o-border-bottom-left-radius: $arguments;
+	-ms-border-bottom-left-radius: $arguments;
+	-khtml-border-bottom-left-radius: $arguments;
+	-webkit-border-bottom-left-radius: $arguments;
+	border-bottom-left-radius: $arguments;
+	-moz-border-top-left-radius: $arguments;
+	-o-border-top-left-radius: $arguments;
+	-ms-border-top-left-radius: $arguments;
+	-khtml-border-top-left-radius: $arguments;
+	-webkit-border-top-left-radius: $arguments;
+	border-top-left-radius: $arguments;
+}
+
+@mixin right-borders ($radius: 6px) {
+	-moz-border-bottom-right-radius: $arguments;
+	-o-border-bottom-right-radius: $arguments;
+	-ms-border-bottom-right-radius: $arguments;
+	-khtml-border-bottom-right-radius: $arguments;
+	-webkit-border-bottom-right-radius: $arguments;
+	border-bottom-right-radius: $arguments;
+	-moz-border-top-right-radius: $arguments;
+	-o-border-top-right-radius: $arguments;
+	-ms-border-top-right-radius: $arguments;
+	-khtml-border-top-right-radius: $arguments;
+	-webkit-border-top-right-radius: $arguments;
+	border-top-right-radius: $arguments;
+}
+
+/* Transitions, transforms, gradients, and animation */
+@mixin transition ($prop: all, $time: 1s, $ease: linear) {
+	-webkit-transition: $prop $time $ease;
+	-moz-transition: $prop $time $ease;
+	-o-transition: $prop $time $ease;
+	-ms-transition: $prop $time $ease;
+	transition: $prop $time $ease;
+}
+
+@mixin transform ($rotate: 90deg, $scale: 1, $skew: 1deg, $translate: 10px) {
+	-webkit-transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+	-moz-transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+	-o-transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+	-ms-transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+	transform: rotate($rotate) scale($scale) skew($skew) translate($translate);
+}
+
+@mixin gradient ($origin: left, $start: #ffffff, $stop: #000000) {
+	background-color: $start;
+	background-image: -webkit-linear-gradient($origin, $start, $stop);
+	background-image: -moz-linear-gradient($origin, $start, $stop);
+	background-image: -o-linear-gradient($origin, $start, $stop);
+	background-image: -ms-linear-gradient($origin, $start, $stop);
+	background-image: linear-gradient($origin, $start, $stop);
+}
+
+@mixin box-sizing ($sizing: border-box) {
+	-ms-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-webkit-box-sizing: $sizing;
+	box-sizing: $sizing;
+}
+
+@mixin opacity ($opacity: 0.5) {
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	-webkit-opacity: $opacity;
+	opacity: $opacity;
+	$opperc: $opacity * 100;
+}

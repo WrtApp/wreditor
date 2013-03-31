@@ -1,0 +1,124 @@
+/*:::: Typography ::::*/
+
+// Your default headline font stack and font weight
+$headline-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headline-weight: bold; // Usually 700 for webfonts
+
+// Your regular text font and weight
+$text-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$text-weight: normal; // Usually 400 for webfonts
+
+body {
+	font-size: 75%;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+	font-family: $headline-font;
+	font-weight: $headline-weight;
+	color: $headline;
+}
+
+h1, h2 {
+	line-height: 1em;
+	margin-bottom: 18px;
+}
+
+h1, h2, h3, h4 {
+	margin-top: 18px;
+}
+
+h3, h4, h5, h6 {
+	line-height: 0.8em;
+}
+
+h1 {
+	font-size: 36px;
+	top: 5px;
+}
+
+h2 {
+	font-size: 28px;
+	top: 8px;
+}
+
+h3 {
+	font-size: 22px;
+	top: 1px;
+}
+
+h4 {
+	font-size: 18px;
+	top: 2px;
+}
+
+h5 {
+	font-size: 15px;
+	top: 4px;
+}
+
+h6 {
+	font-size: 13px;
+	top: 5px;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child {
+	margin-top: 0;
+}
+
+p, pre, address {
+	font-family: $text-font;
+	font-weight: $text-weight;
+	font-size: 16px;
+	line-height: 1.5em;
+	position: relative;
+	top: 5px;
+	color: $bodytext;
+}
+
+small {
+	font-size: 11px;
+}
+
+abbr, code, kbd, samp, small, var {
+	line-height: 15px;
+}
+
+ul, ol, dl, dialog {
+	font-family: $text-font;
+	font-size: 16px;
+	line-height: 1.5em;
+	position: relative;
+	top: 5px;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	color: $bodytype;
+}
+
+li ul, li ol, ul ul, ol ol {
+	top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+li h1, li h2, li h3, li h4, li h5, li h6, li p {
+	top: 0;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+}
+
+a:visited {
+	color: $vlink;
+}
+
+a:hover {
+	color: $hlink;
+}
+
+strong {
+	font-weight: $text-weight;
+}
