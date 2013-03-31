@@ -1,10 +1,8 @@
-# Fraction.less Boilerplate
+# Fraction.less Boilerplate v2.0b
 
-## Now at version 1.9 (with Font Awesome 3.0 included)!
+Fraction.less is an HTML5/CSS3 quick-start kit meant to get sites or web apps designed and developed quickly. Using the grid classes lets you create a page layout in no more than a couple of minutes!
 
-Fraction.less is an HTML5/CSS3 quick-start kit meant to be super easy to start with. Check out the grid classes and you can have a page layout in no more than 5 minutes!
-
-Fraction.less comes with a simple, solid, *responsive* grid system, some common boilerplate styling, common jQuery plugin starting points (sliders, accordions, etc.), tons of HTML5 boilerplate, and best of all, it takes advantage of the LESS CSS superset!
+Fraction.less comes with a simple, solid, *responsive* grid system, some common boilerplate styling, common jQuery plugin starting points (sliders, accordions, etc.), just enough HTML5 boilerplate, and, best of all, it uses LESS.
 
 I've tried to make this as flexible as possible while still providing a really comprehensive baseline for design and development. You may think Fraction.less is bloated in some areas and lacking in others. That's okay. The biggest challenge in creating a boilerplate/framework (whatever you want to call it) is loading it up with a comprehensive set of tools that encourage best practices without creating a bloated framework that people end up spending a lot of time removing stuff from up front.
 
@@ -14,7 +12,7 @@ If you have any ideas or suggestions for how to improve Fraction.less shoot me a
 
 Fraction.less Boilerplate uses code from the following projects:
 
-* jQuery 1.6.4 effect library
+* jQuery 1.9.1
 * Normalize.css CSS 'reset'
 * LESS CSS stylesheet language
 * Validate.js for client side form validation
@@ -28,7 +26,7 @@ Setup is pretty easy and Fraction.less comes with some tools to help you test yo
 
 ## Initial Setup
 
-Download and extract the files to where you want to start developing or do a 
+Download and extract the files to where you want to start developing or do a
     git clone git://github.com/billpatrianakos/Fractionless-Boilerplate.git
 
 
