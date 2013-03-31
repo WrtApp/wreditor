@@ -103,11 +103,12 @@ _.htaccess Files_ - Fraction.less comes with a file named `bootstrap.htaccess`. 
 
 I have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I.
 
-[Paul Irish and the HTML5 Boilerplate team](http://html5boilerplate.com) - HTML5 Boilerplate
-[@andytlr](http://cssgrid.net) - 1140 Grid System
-[Alex Sellier](http://lesscss.org) - LESS dynamic stylesheet language
-[Bryan Jones](http://incident57.com/less/) - LESS.app and CodeKit (Mac only)
-[Enavu](http://vanity.enavu.com/) - Vanity JS common jQuery plugin starter kit
+* [Paul Irish and the HTML5 Boilerplate team](http://html5boilerplate.com) - HTML5 Boilerplate
+* [@andytlr](http://cssgrid.net) - 1140 Grid System
+* [Alex Sellier](http://lesscss.org) - LESS dynamic stylesheet language
+* [Bryan Jones](http://incident57.com/less/) - LESS.app and CodeKit (Mac only)
+* [Enavu](http://vanity.enavu.com/) - Vanity JS common jQuery plugin starter kit
+
 ... and many more I know I'm forgetting.
 
 # License
