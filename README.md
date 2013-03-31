@@ -15,9 +15,8 @@ Fraction.less Boilerplate uses code from the following projects:
 * jQuery 1.9.1
 * Normalize.css CSS 'reset'
 * LESS CSS stylesheet language
-* Validate.js for client side form validation
-* Vanity JS for common jQuery plugin functionality
-* Load.js script loader
+* Parsley.js for client side form validation
+* Vanity JS for common JS effects
 * Test Suite references original projects within the Usage document
 
 # Usage
@@ -32,13 +31,13 @@ Download and extract the files to where you want to start developing or do a
 
 ## The Grid
 
-The Fraction.less grid is based on the 1140 Grid System. It works out of the box but you have the option of being able to change the widths of each class by modifying a few Less variables.
+The Fraction.less grid is based on the 1140 Grid System. It works out of the box but you have the option of being able to change the widths of each class by modifying a few LESS variables.
 
 ### Grid Usage
 
 Basically, its like creating a layout with tables except without any tables. Your `<body>` is the canvas on which you create your grid.
 
-You'll need to add the `.container` class to at least one element to start. This will become a container that holds your grid. It centers your content (as in equal margins on each side, not literally centering things like text) and allows you to give an element a full screen background no matter how wide the screen is while keeping your content at a max width of 1140px. I usually use `.container` to separate logical sections of my pages like the header, main content area, and footer and sometimes I use it to give different parts of pages different color backgrounds.
+You'll need to add the `.container` class to at least one element to start. This will become a container that holds your grid. It centers your elements and allows you to give an element a full screen-width background no matter how wide the browser window is while keeping your content at a max width of 1140px. I usually use `.container` to separate logical sections of my pages like the header, main content area, and footer and sometimes I use it to give different parts of pages different color backgrounds.
 
 Next, use `.row` which will create an 1140px row in which you can put up to 12 columns in horizontally. You can have as many `.row`s as you want within a container and you can even nest rows within columns. If you add a background to a `.row` you'll notice it only spans a maximum width of 1140px.
 
@@ -86,7 +85,7 @@ We've included `less.js` for those who want to save compiling for later or want 
 
 #### Less.app
 
-This version of Fraction.less no longer includes [Less.app](http://incident57.com/less/). Less.app is great but this is a design framework and I'm trying to focus the project more. You can find a LESS compiler on your own (I use [CodeKit](http://incident57.com/codekit/) by the same developer as Less.app. It's great!). On Linux I use the Node package which is installed via NPM. But like I said, just Google around. LESS compilers are not hard to come by. Here are some good ones:
+Fraction.less no longer includes [Less.app](http://incident57.com/less/). Less.app is great but this is a design framework and I'm trying to focus the project more. You can find a LESS compiler on your own (I use [CodeKit](http://incident57.com/codekit/) by the same developer as Less.app. It's great!). On Linux I use the Node package which is installed via NPM. But like I said, just Google around. LESS compilers are not hard to come by. Here are some good ones:
 
 * [Less.app](http://incident57.com/less/) (Mac only)
 * [CodeKit](http://incident57.com/codekit/) (Mac only)
@@ -104,29 +103,27 @@ _.htaccess Files_ - Fraction.less comes with a file named `bootstrap.htaccess`. 
 
 I have to give credit where credit is due. Thanks to all these folks who are by far much smarter and more talented that I.
 
-[http://html5boilerplate.com](Paul Irish) - HTML5 Boilerplate
-[http://cssgrid.net](@andytlr) - 1140 Grid System
-[http://lesscss.org](Cloudhead) - LESS dynamic stylesheet language
-[http://incident57.com/less/](Bryan Jones) - LESS.app and CodeKit (Mac only)
-[http://rickharrison.github.com/validate.js/](Rick Harrison) - validate.js, client side JavaScript form validation library
-[http://vanity.enavu.com/](Enavu) - Vanity JS common jQuery plugin starter kit
-[https://github.com/chriso/load.js](ChrisO) - Load.js, a js lazyloader
+[Paul Irish and the HTML5 Boilerplate team](http://html5boilerplate.com) - HTML5 Boilerplate
+[@andytlr](http://cssgrid.net) - 1140 Grid System
+[Alex Sellier](http://lesscss.org) - LESS dynamic stylesheet language
+[Bryan Jones](http://incident57.com/less/) - LESS.app and CodeKit (Mac only)
+[Enavu](http://vanity.enavu.com/) - Vanity JS common jQuery plugin starter kit
 ... and many more I know I'm forgetting.
 
 # License
 
-Fraction.less Boilerplate is licensed under the BSD license. See the License.md file for details. This means you can use it however and wherever you want. You don't have to release any derivatives as open source and you are free to charge money for derived works. That's why I didn't go with the GPL. I'm very much opinionated about the GPL (and not in a good way).
+Fraction.less Boilerplate is licensed under the BSD license. See the License.md file for details. This means you can use it however and wherever you want. You don't have to release any derivatives as open source and you are free to charge money for derived works. That's why I didn't go with the GPL. I'm not very fond of the GPL to say the least.
 
 # Roadmap
 
 The following features will be implemented in upcoming releases:
 
-* Add a basic favicon and apple touch icons
-* Alternate/improved/better/new dependency management like YepNope.js
-* Basic mailto script (Is this necessary?)
+* Add a basic favicon and apple touch icons __Implemented__
+* Alternate/improved/better/new dependency management like YepNope.js *Abandoned*
+* Basic mailto script (Is this necessary?) *Abandoned*
 * Build scripts and optimizers
 * Benchmarking tests
-* Prettier 404
-* General optimizations everywhere and time-savers
+* Prettier 404 __Implemented__
+* General optimizations everywhere and time-savers __Implemented__
 
 Contributors and suggetions welcome! bill-at-chooseclever-dot-com
