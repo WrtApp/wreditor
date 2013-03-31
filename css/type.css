@@ -66,11 +66,11 @@ p, pre, address {
 	line-height: 1.5em;
 	position: relative;
 	top: 5px;
-	color: @bodytext;
+	color: #505050;
 }
 
 small {
-	font-size: 11px;
+	font-size: 75%;
 }
 
 abbr, code, kbd, samp, small, var {
