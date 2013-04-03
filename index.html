@@ -7,13 +7,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Wreditor | Write now.</title>
-	<meta name="description" content="Wreditor is the standalone version of Write.app's internal editor." />
+	<title>Wreditor | Write now. Save anywhere.</title>
+	<meta name="description" content="Wreditor is a self-deployable browser-based text editor that'll let you save to anywhere." />
 	<meta name="author" content="Bill Patrianakos" />
 	<link rel="author" href="humans.txt" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css?v=2" />
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
 	<link rel="stylesheet" href="codemirror/theme/solarized.css" />
 	<link rel="stylesheet" href="codemirror/theme/rubyblue.css" />
@@ -52,7 +53,20 @@
 	<section id="main-container" class="container">
 		<section class="row">
 			<article class="twelve">
-				<textarea id="editor" name="editor"># Starting text</textarea>
+				<form>
+<textarea id="editor" name="editor">
+# Welcome to Wreditor
+
+Wreditor is a browser-based text editor you can drop into most projects and expect to work.
+
+Wreditor currently implements the following features:
+
+* Automatically closes brackets
+* Live syntax highlighting
+* Live theme switching
+* The readme has more information
+</textarea>
+				</form>
 			</article>
 		</section>
 	</section>
@@ -64,6 +78,7 @@
 	<script>window.jQuery || document.write('<script src="js/libs/jquery1.9.1.min.js"><\/script>')</script>
 	<script src="codemirror/lib/codemirror.js"></script>
 	<script src="codemirror/mode/markdown/markdown.js"></script>
+	<script src="codemirror/addon/edit/closebrackets.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/scripts.js"></script>
 	<script>
@@ -76,8 +91,8 @@
 		}, {
 			value: editor.value,
 			indentUnit: 4,
-			smartIndent: true
-			//theme: "rubyblue"
+			smartIndent: true,
+			autoCloseBrackets: true
 		});
 
 		// Theme switching

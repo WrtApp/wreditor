@@ -4,10 +4,11 @@ Wreditor is the official editor used in Write.app as a standalone front-end.
 
 ## Project goals and philosophy
 
-Make writing in the browser not suck. I believe that [browser based text editors should rival native counterparts](https://writeapp.me/writeapp/note/the-state-of-browser-based-text-editors). Wreditor should implement:
+Make writing in the browser not suck. I believe that [browser based text editors should rival native counterparts](https://writeapp.me/writeapp/note/the-state-of-browser-based-text-editors). Wreditor will implement:
 
 * Save on the fly (no page reloading, that's so 90's)
 * Distraction-free view (focus on the writing, get the buttons out of the way)
+* Full screen mode
 * Live syntax highlighting
 * Bracket completion
 * Real tab indents
