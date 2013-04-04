@@ -28,8 +28,8 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 /* Color scheme for code-mirror */
 
 .cm-s-solarized {
-  font-size: 16px; /* Added */
-  line-height: 1.45em;
+  font-size: 20px; /* Added */
+  line-height: 1.5em;
   font-family: 'Source Code Pro', Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace !important; /* Edited */
   color-profile: sRGB;
   rendering-intent: auto;
