@@ -1,3 +1,10 @@
+/*
+ * Theme: Newplus
+ * Adapted from Mou Night+ by Chen Luois originally written for Mou (http://mouapp.com)
+ * The theme is used here with his permission. Check out Mou too, it's a wonderful
+ * app for those who love writing in Markdown.
+ */
+
 .cm-s-newplus.CodeMirror { background: #282a36; color: white; }
 .cm-s-newplus div.CodeMirror-selected { background: #ff4f92 !important; }
 .cm-s-newplus .CodeMirror-gutters { background: #131319; /*#d0d0d0*/ border-right: 1px solid #aaa; }

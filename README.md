@@ -1,4 +1,4 @@
-# Wreditor v0.0.1
+# Wreditor v0.1.0
 
 Wreditor is the official editor used in Write.app as a standalone front-end.
 
@@ -24,3 +24,7 @@ Make writing in the browser not suck. I believe that [browser based text editors
 3. Open in a browser and enjoy!
 
 *More detailed instructions to come when this project has more than 1 commit...*
+
+# Credits
+
+The Newplus theme is a very slightly modified copy of Mou Night+ by Chen Luois, originally used in Mou (http://mouapp.com). Special thanks to Chen for allowing me to use it in this project.
