@@ -1,46 +1,47 @@
 /*:::: Smaller screens ::::*/
-
 @media only screen and (max-width: 1023px) {
-
-	body {
-		font-size: 0.8em;
-		line-height: 1.5em;
-	}
-
+  body {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
 }
-
-
 /*:::: Mobile ::::*/
-
 @media handheld, only screen and (max-width: 767px) {
-
-	body {
-		font-size: 16px;
-		-webkit-text-size-adjust: none;
-	}
-
-	.row, body, .container {
-		width: 100%;
-		min-width: 0;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.row .one, .row .two, .row .three, .row .four, .row .five, .row .six, .row .seven, .row .eight, .row .nine, .row .ten, .row .eleven, .row .twelve {
-	width: auto;
-	float: none;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-	}
-
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: none;
+  }
+  .row,
+  body,
+  .container {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .row .one,
+  .row .two,
+  .row .three,
+  .row .four,
+  .row .five,
+  .row .six,
+  .row .seven,
+  .row .eight,
+  .row .nine,
+  .row .ten,
+  .row .eleven,
+  .row .twelve {
+    width: auto;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
-
 /*:::: Extra queries just in case... ::::*/
-
 /*@media handheld, only screen and (max-width: 767px) {
 
 	body {
@@ -48,7 +49,6 @@
 	}
 
 }*/
-
 /*:::: Hi-Res images for iPhone4/5 ::::*/
 /*@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -56,5 +56,4 @@
 		background: url(logo2x.jpg) no-repeat;
 		background-size: 212px 303px;
 	}*/
-
 /*}*/

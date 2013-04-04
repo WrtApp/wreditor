@@ -18,6 +18,20 @@
 	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
 	<link rel="stylesheet" href="codemirror/theme/solarized.css" />
 	<link rel="stylesheet" href="codemirror/theme/rubyblue.css" />
+	<link rel="stylesheet" href="codemirror/theme/neat.css">
+	<link rel="stylesheet" href="codemirror/theme/elegant.css">
+	<link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
+	<link rel="stylesheet" href="codemirror/theme/night.css">
+	<link rel="stylesheet" href="codemirror/theme/monokai.css">
+	<link rel="stylesheet" href="codemirror/theme/cobalt.css">
+	<link rel="stylesheet" href="codemirror/theme/eclipse.css">
+	<link rel="stylesheet" href="codemirror/theme/lesser-dark.css">
+	<link rel="stylesheet" href="codemirror/theme/xq-dark.css">
+	<link rel="stylesheet" href="codemirror/theme/xq-light.css">
+	<link rel="stylesheet" href="codemirror/theme/ambiance.css">
+	<link rel="stylesheet" href="codemirror/theme/blackboard.css">
+	<link rel="stylesheet" href="codemirror/theme/vibrant-ink.css">
+	<link rel="stylesheet" href="codemirror/theme/twilight.css">
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,6 +43,14 @@
 	.gradient { filter: none; }
 	</style>
 	<![endif]-->
+
+	<!-- Fix offset cursor position -->
+	<style type="text/css">
+		.CodeMirror pre {
+			height:25px;
+			top: 2px;
+		}
+	</style>
 
 </head>
 
@@ -42,9 +64,23 @@
 					Options:
 					<select onChange="selectTheme()" id="select">
 						<option selected>default</option>
-						<option>rubyblue</option>
-						<option>solarized dark</option>
-						<option>solarized light</option>
+						<option value="ambiance">Ambiance</option>
+						<option value="blackboard">Blackboard</option>
+						<option value="cobalt">Cobalt</option>
+						<option value="eclipse">Eclipse</option>
+						<option value="elegant">Elegant</option>
+						<option value="erlang-dark">Erlang-dark</option>
+						<option value="lesser-dark">Lesser-dark</option>
+						<option value="monokai">Monokai</option>
+						<option value="neat">Neat</option>
+						<option value="night">Night</option>
+						<option value="rubyblue">Rubyblue</option>
+						<option value="solarized dark">Solarized (dark)</option>
+						<option value="solarized light">Solarized (light)</option>
+						<option value="twilight">Twilight</option>
+						<option value="vibrant-ink">Vibrant-ink</option>
+						<option value="xq-dark">Xq-dark</option>
+						<option value="xq-light">Xq-light</option>
 					</select>
 				</p>
 			</article>
@@ -90,15 +126,18 @@ Wreditor currently implements the following features:
 		  editor.parentNode.replaceChild(elt, editor);
 		}, {
 			value: editor.value,
+			lineNumbers: true,
 			indentUnit: 4,
 			smartIndent: true,
-			autoCloseBrackets: true
+			indentWithTabs: true,
+			autoCloseBrackets: true,
+			theme: "solarized dark"
 		});
 
 		// Theme switching
 		var input = document.getElementById("select");
 		function selectTheme() {
-			var theme = input.options[input.selectedIndex].innerHTML;
+			var theme = input.options[input.selectedIndex].value;
 			myCodeMirror.setOption("theme", theme);
 		}
 

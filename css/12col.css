@@ -1,10 +1,11 @@
-/*====================================================================*\
- * Fraction.less Grid 												  *
- * Adapted from The 1140px Grid V2 by Andy Taylor http://cssgrid.net  *
- * http://fractionless.info 										  *
-\*====================================================================*/
-/*:::: Grid variables ::::*/
-/*:::: Containers ::::*/
+/****************************************\
+ * Fraction.less Responsive grid 		*
+ *							 	  		*
+ * Author: 	Bill Patrianakos 	  		*
+ * Site:	billpatrianakos.me 	  		*
+ * License: BSD					  		*
+\****************************************/
+/*:::: CONTAINERS ::::*/
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -16,7 +17,7 @@
   margin: 0 auto;
   overflow: hidden;
 }
-/*:::: Columns ::::*/
+/*:::: COLUMNS ::::*/
 .one,
 .two,
 .three,
@@ -69,17 +70,18 @@
   width: 100%;
   float: left;
 }
-/*:::: Floats ::::*/
+/*:::: FLOATS ::::*/
 .left {
   float: left;
 }
 .right {
   float: right;
 }
+/* Last div in a row can't mess up our nice grid */
 .last {
   margin-right: 0px;
 }
-/*:::: Images and objects ::::*/
+/*:::: RESPONSIVE IMAGES ::::*/
 img,
 object,
 embed {
@@ -88,3 +90,4 @@ embed {
 img {
   height: auto;
 }
+/* !! MEDIA QUERIES ARE AT THE BOTTOM OF 'style.less' - LEAVE THEM THERE FOR GOOD REASON !! */
