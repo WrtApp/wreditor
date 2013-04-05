@@ -4,8 +4,8 @@
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
   height: 300px;
-  font-size: 20px;
-  line-height: 1.5em
+ /* font-size: 20px;
+  line-height: 1.45em */
 }
 .CodeMirror-scroll {
   /* Set scrolling behaviour here */
@@ -43,7 +43,7 @@
 
 .CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid black;
-  z-index: 3;
+  z-index: 100; /* Originally set to '3' */
 }
 /* Shown when moving in bi-directional text */
 .CodeMirror div.CodeMirror-secondarycursor {
@@ -103,7 +103,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
    the editor. You probably shouldn't touch them. */
 
 .CodeMirror {
-  line-height: 1;
+  line-height: 1; /* Originally '1' without 'em' or any specific measurement type */
   position: relative;
   overflow: hidden;
   background: white;

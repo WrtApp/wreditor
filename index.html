@@ -127,12 +127,13 @@ Wreditor currently implements the following features:
 		var myCodeMirror = CodeMirror(function(elt) {
 		  editor.parentNode.replaceChild(elt, editor);
 		}, {
+			mode: "markdown",
 			value: editor.value,
 			lineNumbers: true,
 			lineWrapping: true,
-			indentUnit: 4,
-			smartIndent: true,
-			indentWithTabs: true,
+			//indentUnit: 4,
+			//smartIndent: true,
+			//indentWithTabs: true,
 			autoCloseBrackets: true,
 			theme: "solarized dark"
 		});
