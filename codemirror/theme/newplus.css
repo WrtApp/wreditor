@@ -5,111 +5,109 @@
  * app for those who love writing in Markdown.
  */
 
-.cm-s-newplus.CodeMirror { background: #282a36; color: white; }
-.cm-s-newplus div.CodeMirror-selected { background: #ff4f92 !important; }
-.cm-s-newplus .CodeMirror-gutters { background: #131319; /*#d0d0d0*/ border-right: 1px solid #aaa; }
-.cm-s-newplus .CodeMirror-linenumber { color: #37394D; text-shadow: 0 -1px 1px #131319; }
-.cm-s-newplus .CodeMirror-cursor { border-left: 1px solid white !important; }
+.cm-s-newplus.CodeMirror {
+	font-family: Inconsolata, 'Source Code Pro', Menlo, Monaco, monospace !important;
+	background: #282a36;
+	color: #eeeeee;
+	font-weight: 300 !important;
+}
 
-.cm-s-newplus span.cm-comment { color: #08f; }
-.cm-s-newplus span.cm-atom { color: #845dc4; }
-.cm-s-newplus span.cm-number, .cm-s-newplus span.cm-attribute { color: #ff80e1; }
-.cm-s-newplus span.cm-keyword { color: #ffee80; }
-.cm-s-newplus span.cm-string { color: #3ad900; }
-.cm-s-newplus span.cm-meta { color: #ff9d00; }
-.cm-s-newplus span.cm-variable-2, .cm-s-newplus span.cm-tag { color: #9effff; }
-.cm-s-newplus span.cm-variable-3, .cm-s-newplus span.cm-def { color: white; }
-.cm-s-newplus span.cm-error { color: #9d1e15; }
-.cm-s-newplus span.cm-bracket { color: #d8d8d8; }
-.cm-s-newplus span.cm-builtin, .cm-s-newplus span.cm-special { color: #ff9e59; }
-.cm-s-newplus span.cm-link { color: #845dc4; }
+.cm-s-newplus div.CodeMirror-selected {
+	background: #ff4f92 !important;
+	color: #ffffff;
+}
+
+.cm-s-newplus .CodeMirror-gutters {
+	background: #131319; border-right: 1px solid #aaa;
+}
+
+.cm-s-newplus .CodeMirror-linenumber {
+	color: #37394D; text-shadow: 0 -1px 1px #131319;
+}
+
+.cm-s-newplus .CodeMirror-cursor {
+	border-left: 2px solid #ff3319 !important;
+}
+
+.cm-s-newplus pre {
+	font-weight: 400;
+}
+
+.cm-s-newplus span.cm-comment {
+	color: #cf009a;
+}
+
+.cm-s-newplus span.cm-atom {
+	color: #93a1a1;
+}
+
+.cm-s-newplus span.cm-number, .cm-s-newplus span.cm-attribute {
+	color: #ff80e1;
+}
+
+.cm-s-newplus span.cm-keyword {
+	color: #ffee80;
+}
+
+.cm-s-newplus span.cm-string {
+	color: #3ad900;
+}
+
+.cm-s-newplus span.cm-meta {
+	color: #ff9d00;
+}
+
+.cm-s-newplus span.cm-variable-2, .cm-s-newplus span.cm-tag {
+	color: #85d065;
+}
+
+.cm-s-newplus span.cm-variable-3, .cm-s-newplus span.cm-def {
+	color: white;
+}
+
+.cm-s-newplus span.cm-error {
+	color: #9d1e15;
+}
+
+.cm-s-newplus span.cm-bracket {
+	color: #d8d8d8;
+}
+
+.cm-s-newplus span.cm-builtin, .cm-s-newplus span.cm-special {
+	color: #ff9e59;
+}
+
+.cm-s-newplus span.cm-link {
+	color: #59acf3;
+}
+
+.cm-s-newplus span.cm-link.cm-variable-2 {
+	color: #618890;
+}
+
+.cm-s-newplus span.cm-header {
+	font-size: 20px;
+	font-weight: 700;
+	color: #8d7cd2;
+}
+
+.cm-s-newplus span.cm-em {
+	font-style: italic;
+	color: #db8d50;
+}
+
+.cm-s-newplus span.cm-strong {
+	font-weight: 700;
+	color: #00b2ce;
+}
+
+.cm-s-newplus span.cm-hr {
+	color: #586e75;
+}
+
+
 
 /* Cursor */
 .cm-s-newplus .CodeMirror-lines .CodeMirror-cursor {
   border-left: 2px solid #ff3319 !important; /* #819090 */
 }
-
-/*
- * New theme
- editor
-foreground: eeeeee
-background: 282a36
-caret: ff3319
-
-editor-selection
-foreground: ffffff
-background: ff4f92
-
-H1
-foreground: 8d7cd2
-font-style: bold
-font-size: 24px
-
-H2
-foreground: 8d7cd2
-font-style: bold
-font-size: 20px
-
-H3
-foreground: 8d7cd2
-font-size: 17px
-
-H4
-foreground: 8d7cd2
-font-size: 15px
-
-H5
-foreground: 8d7cd2
-font-size: 13px
-
-H6
-foreground: 8d7cd2
-font-size: 11px
-
-EMPH
-foreground: db8d50
-font-style: italic
-
-STRONG
-foreground: 00b2ce
-font-style: bold
-
-HRULE
-foreground: 586e75
-
-LIST_BULLET
-foreground: ffff00
-
-LIST_ENUMERATOR
-foreground: ffff00
-
-LINK
-foreground: 59acf3
-
-AUTO_LINK_URL
-foreground: 59acf3
-
-AUTO_LINK_EMAIL
-foreground: 59acf3
-
-REFERENCE
-foreground: 618890
-
-IMAGE
-foreground: 85d065
-
-CODE
-foreground: cf009a
-
-VERBATIM
-foreground: cf009a
-
-HTML_ENTITY
-foreground: 6c71c4
-
-COMMENT
-foreground: 93a1a1
-
-BLOCKQUOTE
-foreground: ff0000
-*/
