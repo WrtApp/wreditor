@@ -8,6 +8,7 @@
 .cm-s-newplus.CodeMirror {
 	font-family: Inconsolata, 'Source Code Pro', Menlo, Monaco, monospace !important;
 	font-size: 20px;
+	line-height: 1.5em;
 	background: #282a36;
 	color: #eeeeee;
 	font-weight: 300 !important;
@@ -19,11 +20,13 @@
 }
 
 .cm-s-newplus .CodeMirror-gutters {
-	background: #131319; border-right: 1px solid #aaa;
+	background: #131319;
+	border-right: 1px solid #aaa;
 }
 
 .cm-s-newplus .CodeMirror-linenumber {
-	color: #37394D; text-shadow: 0 -1px 1px #131319;
+	color: #37394D;
+	text-shadow: 0 -1px 1px #131319;
 }
 
 .cm-s-newplus .CodeMirror-cursor {
@@ -111,5 +114,5 @@
 /* Cursor */
 .cm-s-newplus .CodeMirror-lines .CodeMirror-cursor {
   border-left: 2px solid #ff3319 !important; /* #819090 */
-  z-index: 3000 !important;
+  height: 22px !important;
 }

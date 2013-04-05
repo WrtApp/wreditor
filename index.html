@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="codemirror/theme/neat.css">
 	<link rel="stylesheet" href="codemirror/theme/elegant.css">
 	<link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
-	<link rel="stylesheet" href="codemirror/theme/night.css">
+	<link rel="stylesheet" href="codemirror/theme/night.css" -->
 	<link rel="stylesheet" href="codemirror/theme/newplus.css">
 	<link rel="stylesheet" href="codemirror/theme/monokai.css">
 	<link rel="stylesheet" href="codemirror/theme/cobalt.css">
@@ -47,10 +47,10 @@
 
 	<!-- Fix offset cursor position -->
 	<style type="text/css">
-		.CodeMirror pre {
+		/*.CodeMirror pre {
 			height:25px;
 			top: 0px;
-		}
+		}*/
 	</style>
 
 </head>
@@ -131,11 +131,11 @@ Wreditor currently implements the following features:
 			value: editor.value,
 			lineNumbers: true,
 			lineWrapping: true,
-			//indentUnit: 4,
-			//smartIndent: true,
-			//indentWithTabs: true,
+			indentUnit: 4,
+			smartIndent: true,
+			indentWithTabs: true,
 			autoCloseBrackets: true,
-			theme: "solarized dark"
+			theme: "newplus"
 		});
 
 		// Theme switching
