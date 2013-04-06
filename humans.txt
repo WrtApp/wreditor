@@ -9,11 +9,12 @@
   Location: Chicago
 
 /* THANKS */
-  Names (& URL): To the users of Write.app without whom I'd have never come so far in this project or as a developer
+  To the users of Write.app without whom I'd have never come so far in this project or as a developer
+  And to the developer of CodeMirror
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: jQuery, LESS, Fraction.less Boilerplate, Ace Editor
+  Components: jQuery, LESS, Fraction.less Boilerplate, CodeMirror
   Software: Sublime Text 2
   Last updated: 2013/04/02
   Language: English
@@ -22,4 +23,4 @@
 
 
 
-   # This site was built with Fraction.less http://fractionless.info
+   # Wreditor was built on Fraction.less http://fractionless.info

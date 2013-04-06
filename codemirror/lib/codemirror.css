@@ -2,8 +2,10 @@
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
+  font-family: 'Inconsolata', monospace;
   height: 100%;
+  font-size: 20px;
+  line-height: 1.5em !important;
 }
 .CodeMirror-scroll {
   /* Set scrolling behaviour here */

@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="codemirror/theme/neat.css">
 	<link rel="stylesheet" href="codemirror/theme/elegant.css">
 	<link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
-	<link rel="stylesheet" href="codemirror/theme/night.css" -->
+	<link rel="stylesheet" href="codemirror/theme/night.css">
 	<link rel="stylesheet" href="codemirror/theme/newplus.css">
 	<link rel="stylesheet" href="codemirror/theme/monokai.css">
 	<link rel="stylesheet" href="codemirror/theme/cobalt.css">
@@ -51,6 +51,11 @@
 			height:25px;
 			top: 0px;
 		}*/
+
+		html, body {
+			min-height: 100%;
+			margin: 0;
+		}
 	</style>
 
 </head>
@@ -59,10 +64,9 @@
 
 	<header class="container">
 		<section class="row">
-
 			<article class="twelve">
 				<p>
-					Options:
+					Theme:
 					<select onChange="selectTheme()" id="select">
 						<option selected>default</option>
 						<option value="ambiance">Ambiance</option>
@@ -84,6 +88,7 @@
 						<option value="xq-dark">Xq-dark</option>
 						<option value="xq-light">Xq-light</option>
 					</select>
+					Line numbers: <input type="checkbox" id="linenumbers" value="true" checked />
 				</p>
 			</article>
 		</section>
@@ -129,7 +134,7 @@ Wreditor currently implements the following features:
 		}, {
 			mode: "markdown",
 			value: editor.value,
-			lineNumbers: true,
+			//lineNumbers: true,
 			lineWrapping: true,
 			indentUnit: 4,
 			smartIndent: true,
@@ -145,6 +150,37 @@ Wreditor currently implements the following features:
 			myCodeMirror.setOption("theme", theme);
 		}
 
+	</script>
+	<script>
+		$(document).ready(function(){
+		  resizeDiv();
+		});
+
+		window.onresize = function(event) {
+		  resizeDiv();
+		}
+
+		function resizeDiv() {
+		  vpw = $(window).width();
+		  vph = $(window).height();
+		  $('.CodeMirror').css({'height': vph + 'px'});
+		}
+	</script>
+
+	<script>
+		var currentTheme = ["ambiance", "blackboard", "cobalt", "eclipse", "elegant", "monokai", "neat", "night", "newplus", "rubyblue", "twilight"];
+		$('#select').change(function() {
+			for (var i = 0; i < 12; i++) {
+				$('#main-container').removeClass(currentTheme[i]);
+			};
+			var editortheme = $('#select').val();
+			$('#main-container').addClass(editortheme);
+		});
+
+		$('#linenumbers').change(function() {
+			var lineNumbers = $('#linenumbers').val();
+			myCodeMirror.setOption("lineNumbers", lineNumbers);
+		})
 	</script>
 
 	<!--[if lt IE 7 ]>

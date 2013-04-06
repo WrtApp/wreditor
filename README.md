@@ -1,4 +1,4 @@
-# Wreditor v0.1.0
+# Wreditor v0.1.1
 
 Wreditor is the official editor used in Write.app as a standalone front-end.
 
