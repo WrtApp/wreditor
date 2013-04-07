@@ -1583,6 +1583,9 @@ header {
   box-shadow: 0 2px 9px #272727;
   margin-bottom: 6px;
 }
+header p {
+  top: 0;
+}
 .ambiance {
   background: #E6E1DC;
 }
