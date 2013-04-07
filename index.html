@@ -66,9 +66,8 @@
 		<section class="row">
 			<article class="twelve">
 				<p>
-					Theme:
 					<select onChange="selectTheme()" id="select">
-						<option selected>default</option>
+						<option value="default" selected>Theme</option>
 						<option value="ambiance">Ambiance</option>
 						<option value="blackboard">Blackboard</option>
 						<option value="cobalt">Cobalt</option>
@@ -88,7 +87,11 @@
 						<option value="xq-dark">Xq-dark</option>
 						<option value="xq-light">Xq-light</option>
 					</select>
-					Line numbers: <input type="checkbox" id="linenumbers" value="true" checked />
+					<select class="lines" onChange="setLines()" name="linenumbers">
+						<option>Line numbers</option>
+						<option value="true">On</option>
+						<option value="false">Off</option>
+					</select>
 				</p>
 			</article>
 		</section>
@@ -134,7 +137,7 @@ Wreditor currently implements the following features:
 		}, {
 			mode: "markdown",
 			value: editor.value,
-			//lineNumbers: true,
+			//lineNumbers: false,
 			lineWrapping: true,
 			indentUnit: 4,
 			smartIndent: true,
@@ -177,10 +180,23 @@ Wreditor currently implements the following features:
 			$('#main-container').addClass(editortheme);
 		});
 
-		$('#linenumbers').change(function() {
-			var lineNumbers = $('#linenumbers').val();
+		/*$(document).ready(function() {
+			$('.lines').on('change', '.lines', function() {
+				var lineNumbers = $('input[type="radio"][name="linenumbers"]:checked').val();
+				myCodeMirror.setOption("lineNumbers", lineNumbers);
+			});
+		});*/
+
+		/*$(document).ready(function() {
+			$('.lines').change(function() {
+				setLines();
+			});
+		});*/
+		function setLines() {
+			//var lineNumbers = $('.lines').val();
+			var lineNumbers = this.selected ? 'true' : 'false';
 			myCodeMirror.setOption("lineNumbers", lineNumbers);
-		})
+		}
 	</script>
 
 	<!--[if lt IE 7 ]>
