@@ -56,12 +56,28 @@
 			min-height: 100%;
 			margin: 0;
 		}
+
+		.options {
+			position: absolute;
+			top: 5px;
+			right: 20px;
+			font-size: 30px;
+		}
+
+		.distraction-free, .resize {
+			position: absolute;
+			top: 5px;
+			right: 60px;
+			font-size: 30px;
+		}
 	</style>
 
 </head>
 
 <body>
-
+<span class="options"><a href="#"><i class="icon-cog"></i></a></span>
+<span class="distraction-free"><a href="#"><i class="icon-resize-full"></i></a></span>
+<span class="resize hidden"><a href="#"><i class="icon-resize-small"></i></a></span>
 	<header class="container">
 		<section class="row">
 			<article class="twelve">
@@ -87,19 +103,17 @@
 						<option value="xq-dark">Xq-dark</option>
 						<option value="xq-light">Xq-light</option>
 					</select>
-					<select class="lines" onChange="setLines()" name="linenumbers">
-						<option>Line numbers</option>
-						<option value="true">On</option>
-						<option value="false">Off</option>
-					</select>
+					<a id="linesOn" href="#">Lines on</a> | <a id="linesOff" href="#">Lines off</a>
 				</p>
 			</article>
 		</section>
 	</header>
-	<section id="main-container" class="container">
+	<section id="main-container" class="container newplus">
 		<section class="row">
 			<article class="twelve">
 				<form>
+					<input type="text" name="title" placeholder="Title" class="settings" style="display:none;" />
+					<br />
 <textarea id="editor" name="editor">
 # Welcome to Wreditor
 
@@ -128,16 +142,11 @@ Wreditor currently implements the following features:
 	<script src="js/plugins.js"></script>
 	<script src="js/scripts.js"></script>
 	<script>
-		/*var myCodeMirror = CodeMirror(document.getElementById('editor'), {
-			value: "function myScript(){return 100;}\n",
-			mode:  "markdown"
-		});*/
 		var myCodeMirror = CodeMirror(function(elt) {
 		  editor.parentNode.replaceChild(elt, editor);
 		}, {
 			mode: "markdown",
 			value: editor.value,
-			//lineNumbers: false,
 			lineWrapping: true,
 			indentUnit: 4,
 			smartIndent: true,
@@ -155,6 +164,7 @@ Wreditor currently implements the following features:
 
 	</script>
 	<script>
+		// Full height editor container
 		$(document).ready(function(){
 		  resizeDiv();
 		});
@@ -180,23 +190,33 @@ Wreditor currently implements the following features:
 			$('#main-container').addClass(editortheme);
 		});
 
-		/*$(document).ready(function() {
-			$('.lines').on('change', '.lines', function() {
-				var lineNumbers = $('input[type="radio"][name="linenumbers"]:checked').val();
-				myCodeMirror.setOption("lineNumbers", lineNumbers);
+		$(document).ready(function() {
+			$('#linesOn').click(function() {
+				myCodeMirror.setOption("lineNumbers", true);
 			});
-		});*/
+			$('#linesOff').click(function() {
+				myCodeMirror.setOption("lineNumbers", false);
+			});
+		});
 
-		/*$(document).ready(function() {
-			$('.lines').change(function() {
-				setLines();
+		$(document).ready(function() {
+			$('.distraction-free').click(function() {
+				$('header').hide();
+				$(this).addClass('hidden');
+				$('.resize').removeClass('hidden');
 			});
-		});*/
-		function setLines() {
-			//var lineNumbers = $('.lines').val();
-			var lineNumbers = this.selected ? 'true' : 'false';
-			myCodeMirror.setOption("lineNumbers", lineNumbers);
-		}
+			$('.resize').click(function() {
+				$('header').show();
+				$(this).addClass('hidden');
+				$('.distraction-free').removeClass('hidden');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.options').click(function() {
+				$('.settings').toggle();
+			});
+		});
 	</script>
 
 	<!--[if lt IE 7 ]>
