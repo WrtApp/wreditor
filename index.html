@@ -59,19 +59,27 @@
 			margin: 0;
 		}
 
-		.options {
+		.save {
 			position: absolute;
 			top: 5px;
 			right: 20px;
 			font-size: 30px;
 		}
 
-		.distraction-free, .resize {
+		.options {
 			position: absolute;
 			top: 5px;
 			right: 60px;
 			font-size: 30px;
 		}
+
+		.distraction-free, .resize {
+			position: absolute;
+			top: 5px;
+			right: 100px;
+			font-size: 30px;
+		}
+
 	</style>
 
 </head>
@@ -80,6 +88,7 @@
 <span class="options"><a href="#"><i class="icon-cog"></i></a></span>
 <span class="distraction-free"><a href="#"><i class="icon-resize-full"></i></a></span>
 <span class="resize hidden"><a href="#"><i class="icon-resize-small"></i></a></span>
+<span class="save"><a href="#"><i class="icon-save"></i></a></span>
 	<header class="container">
 		<section class="row">
 			<article class="twelve">
@@ -116,7 +125,7 @@
 		<section class="row">
 			<article class="twelve">
 				<form>
-					<input type="text" name="title" placeholder="Title" class="settings" style="display:none;" />
+					<input type="text" name="title" placeholder="Title" class="settings title" style="display:none;" />
 					<br />
 <textarea id="editor" name="editor">
 # Welcome to Wreditor
@@ -143,8 +152,16 @@ Wreditor currently implements the following features:
 	<script src="codemirror/lib/codemirror.js"></script>
 	<script src="codemirror/mode/markdown/markdown.js"></script>
 	<script src="codemirror/addon/edit/closebrackets.js"></script>
+	<!-- script src="js/blob.js"></script>
+	<script src="js/blobbuilder.js"></script -->
+	<script src="js/filesaver.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/scripts.js"></script>
+	<script>
+		// Testing filesaver functionality
+		/*var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+		saveAs(blob, "hello_world.txt");*/
+	</script>
 
 	<!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

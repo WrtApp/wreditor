@@ -90,3 +90,13 @@ $(document).ready(function() {
 		$('.settings').toggle();
 	});
 });
+
+// Save to local storage
+$(document).ready(function() {
+	$('.save').click(function() {
+		var filename = $('.title').val() + '.md';
+		var content = myCodeMirror.getValue();
+		var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+		saveAs(blob, filename);
+	});
+});
