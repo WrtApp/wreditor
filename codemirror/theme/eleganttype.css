@@ -1,0 +1,33 @@
+.cm-s-eleganttype.CodeMirror {
+	font-family: Alike, Georgia, serif !important;
+	font-size: 22px;
+	line-height: 1.5em;
+	font-weight: 300 !important;
+	color: #505050 !important;
+}
+
+.cm-s-eleganttype span.cm-header {
+	color: #202020 !important;
+}
+
+.cm-s-eleganttype div.CodeMirror-selected {
+	background: #AFDDEF !important;
+	color: #0C477A;
+}
+
+.cm-s-eleganttype span.cm-number, .cm-s-eleganttype span.cm-string, .cm-s-eleganttype span.cm-atom {color: #1A74A9;}
+.cm-s-eleganttype span.cm-comment {color: #262; font-style: italic; line-height: 1em;}
+.cm-s-eleganttype span.cm-meta {color: #555; font-style: italic; line-height: 1em;}
+.cm-s-eleganttype span.cm-variable {color: black;}
+.cm-s-eleganttype span.cm-variable-2 {color: #b11;}
+.cm-s-eleganttype span.cm-qualifier {color: #555;}
+.cm-s-eleganttype span.cm-keyword {color: #730;}
+.cm-s-eleganttype span.cm-builtin {color: #30a;}
+.cm-s-eleganttype span.cm-error {background-color: #fdd;}
+.cm-s-eleganttype span.cm-link {color: #0C477A;}
+
+/* Cursor */
+.cm-s-eleganttype .CodeMirror-lines .CodeMirror-cursor {
+  border-left: 3px solid #017FE5 !important; /* #819090 */
+  height: 28px !important;
+}

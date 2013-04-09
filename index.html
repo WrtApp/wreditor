@@ -14,12 +14,14 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css?v=2" />
-	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Code+Pro:300,400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Source+Code+Pro:300,400,700|Inconsolata:400,700|Alike' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
 	<link rel="stylesheet" href="codemirror/theme/solarized.css" />
 	<link rel="stylesheet" href="codemirror/theme/rubyblue.css" />
 	<link rel="stylesheet" href="codemirror/theme/neat.css">
 	<link rel="stylesheet" href="codemirror/theme/elegant.css">
+	<link rel="stylesheet" href="codemirror/theme/elegantcode.css">
+	<link rel="stylesheet" href="codemirror/theme/eleganttype.css">
 	<link rel="stylesheet" href="codemirror/theme/erlang-dark.css">
 	<link rel="stylesheet" href="codemirror/theme/night.css">
 	<link rel="stylesheet" href="codemirror/theme/newplus.css">
@@ -89,6 +91,8 @@
 						<option value="cobalt">Cobalt</option>
 						<option value="eclipse">Eclipse</option>
 						<option value="elegant">Elegant</option>
+						<option value="elegantcode">Elegant Code</option>
+						<option value="eleganttype">Elegant Type</option>
 						<option value="erlang-dark">Erlang-dark</option>
 						<option value="lesser-dark">Lesser-dark</option>
 						<option value="monokai">Monokai</option>
@@ -141,83 +145,6 @@ Wreditor currently implements the following features:
 	<script src="codemirror/addon/edit/closebrackets.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/scripts.js"></script>
-	<script>
-		var myCodeMirror = CodeMirror(function(elt) {
-		  editor.parentNode.replaceChild(elt, editor);
-		}, {
-			mode: "markdown",
-			value: editor.value,
-			lineWrapping: true,
-			indentUnit: 4,
-			smartIndent: true,
-			indentWithTabs: true,
-			autoCloseBrackets: true,
-			theme: "newplus"
-		});
-
-		// Theme switching
-		var input = document.getElementById("select");
-		function selectTheme() {
-			var theme = input.options[input.selectedIndex].value;
-			myCodeMirror.setOption("theme", theme);
-		}
-
-	</script>
-	<script>
-		// Full height editor container
-		$(document).ready(function(){
-		  resizeDiv();
-		});
-
-		window.onresize = function(event) {
-		  resizeDiv();
-		}
-
-		function resizeDiv() {
-		  vpw = $(window).width();
-		  vph = $(window).height();
-		  $('#main-container').css({'min-height': vph + 'px'});
-		}
-	</script>
-
-	<script>
-		var currentTheme = ["ambiance", "blackboard", "cobalt", "eclipse", "elegant", "monokai", "neat", "night", "newplus", "rubyblue", "twilight"];
-		$('#select').change(function() {
-			for (var i = 0; i < 12; i++) {
-				$('#main-container').removeClass(currentTheme[i]);
-			};
-			var editortheme = $('#select').val();
-			$('#main-container').addClass(editortheme);
-		});
-
-		$(document).ready(function() {
-			$('#linesOn').click(function() {
-				myCodeMirror.setOption("lineNumbers", true);
-			});
-			$('#linesOff').click(function() {
-				myCodeMirror.setOption("lineNumbers", false);
-			});
-		});
-
-		$(document).ready(function() {
-			$('.distraction-free').click(function() {
-				$('header').hide();
-				$(this).addClass('hidden');
-				$('.resize').removeClass('hidden');
-			});
-			$('.resize').click(function() {
-				$('header').show();
-				$(this).addClass('hidden');
-				$('.distraction-free').removeClass('hidden');
-			});
-		});
-
-		$(document).ready(function() {
-			$('.options').click(function() {
-				$('.settings').toggle();
-			});
-		});
-	</script>
 
 	<!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

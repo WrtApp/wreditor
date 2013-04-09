@@ -1,0 +1,33 @@
+.cm-s-elegantcode.CodeMirror {
+	font-family: 'Source Code Pro', Menlo, Monaco, monospace !important;
+	font-size: 20px;
+	line-height: 1.5em;
+	font-weight: 300 !important;
+	color: #505050 !important;
+}
+
+.cm-s-elegantcode span.cm-header {
+	color: #202020 !important;
+}
+
+.cm-s-elegantcode div.CodeMirror-selected {
+	background: #AFDDEF !important;
+	color: #0C477A;
+}
+
+.cm-s-elegantcode span.cm-number, .cm-s-elegantcode span.cm-string, .cm-s-elegantcode span.cm-atom {color: #1A74A9;}
+.cm-s-elegantcode span.cm-comment {color: #262; font-style: italic; line-height: 1em;}
+.cm-s-elegantcode span.cm-meta {color: #555; font-style: italic; line-height: 1em;}
+.cm-s-elegantcode span.cm-variable {color: black;}
+.cm-s-elegantcode span.cm-variable-2 {color: #b11;}
+.cm-s-elegantcode span.cm-qualifier {color: #555;}
+.cm-s-elegantcode span.cm-keyword {color: #730;}
+.cm-s-elegantcode span.cm-builtin {color: #30a;}
+.cm-s-elegantcode span.cm-error {background-color: #fdd;}
+.cm-s-elegantcode span.cm-link {color: #0C477A;}
+
+/* Cursor */
+.cm-s-elegantcode .CodeMirror-lines .CodeMirror-cursor {
+  border-left: 3px solid #017FE5 !important; /* #819090 */
+  height: 28px !important;
+}
