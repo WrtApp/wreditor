@@ -94,7 +94,14 @@ $(document).ready(function() {
 // Save to local storage
 $(document).ready(function() {
 	$('.save').click(function() {
-		var filename = $('.title').val() + '.md';
+		if ($('.title').val() === "" || $('.title').val() === null)
+			{
+				var filename = 'Untitled.md';
+			}
+		else
+			{
+				var filename = $('.title').val() + '.md';
+			}
 		var content = myCodeMirror.getValue();
 		var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
 		saveAs(blob, filename);
