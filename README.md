@@ -23,6 +23,10 @@ Make writing in the browser not suck. I believe that [browser based text editors
 2. Connect the backend to whatever you want.
 3. Open in a browser and enjoy!
 
+### Simple server tool
+
+Wreditor now comes with a handly little CLI tool that opens up a simple HTTP server. This currently only worked on Mac and Linux systems. It may work on Windows but is untested. To use this tool on a Mac simply double click the `start.command` file then open up a browser window and navigate to `http://localhost:8000`. From there you'll need to navigate to where you saved Wreditor. Putting Wreditor in your home folder will make things easier if you're not familiar with the file system. I'm working on making this much simpler and better. *Note: The simple server requires Python 2.7 or later to run.*
+
 *More detailed instructions to come when this project has more than 1 commit...*
 
 # Credits
