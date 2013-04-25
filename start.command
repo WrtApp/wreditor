@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+
 # Wreditor's startup script
 # Starts Python's SimpleHTTPServer and allows you to run Wreditor locally.
 
