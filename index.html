@@ -130,21 +130,53 @@
 					<input type="text" name="title" placeholder="Title" class="settings title" style="display:none;" />
 					<br />
 <textarea id="editor" name="editor">
-# Welcome to Wreditor
+# Welcome to Wreditor (v0.8.3)
 
-Wreditor is a browser-based text editor you can drop into most projects and expect to work.
+Wreditor is the browser-based text editor that powers [Write.app](https://writeapp.me). It's built on top of the wonderful [Codemirror project](http://codemirror.net) and you can drop it into most projects and expect it to work with minimal effort.
 
-Wreditor currently implements the following features:
+*Wreditor currently implements the following features:*
 
 * Automatically closes brackets
-* Live syntax highlighting
+* Live syntax highlighting (Markdown by default with other languages available)
 * Live theme switching
+* Toggle line numbers
+* Save locally
+* Distraction-free mode
+* Note options
+* Bundled web server for running it locally
 * The readme has more information
 * See the [blog post](http://billpatrianakos.me/blog/2013/04/22/introducing-wreditor-the-in-browser-text-editor/)
 
+*Features coming soon*
+
+* General improvements to all current features
+* Write.app users can save to their accounts from any Wreditor instance
+* Easily plug into any custom database
+* Live-preview mode
+
 ## Get the source!
 
-[On GitHub](http://wrtapp.github.io/wreditor/)
+[On GitHub](https://github.com/WrtApp/wreditor)
+
+# Frequently asked questions
+
+## What can it do?
+
+Wreditor is set up to be a...
+
+* Drop-in solution for any project requiring a powerful, customizeable, browser-based text editor along the lines of Codemirror.
+* Standalone, simplistic text editor. What does just about every computer have installed? A web browser. You can run Wreditor locally using the bundled simple HTTP server script (requires Python) or using XAMPP, MAMP.
+* Private or public hosted tool. Drop the contents of the `wreditor` folder onto a web server and have an easily accessible, customizeable text editor at your disposal everywhere you have a web connection. (Or you can just use this demo if that's sufficient for you).
+
+## How is it different than CodeMirror?
+
+You may wonder, "Why not just use CodeMirror instead?" and you'd have a great point. Wreditor relies heavily on CodeMirror for it's functionality. On the surface it's basically a CodeMirror instance that's been set up for a specific use-case. Even so, Wreditor comes pre-made and bundled with customizations and tools that would take quite a bit of time for some people (but not all) to implement. Rather than spend time learning the CodeMirror API, installing it on a custom page, and running an instance with all the features you want you can just pick up Wreditor and have most of the work done for you plus extra features like distraction-free mode, file options, ability to save files locally, and being ready to plug into your own database or Write.app's API for those who happen to have a Write.app account.
+
+Write.app's editor has gone through three major revisions since the first version was built in 2011. Wreditor is the third major release of the [Write.app editor](https://writeapp.me/write) and the first to be open sourced. All of its features have been refined after three years of work and research into how people use Markdown text editors.
+
+## Differences between Write.app's Wreditor implementation and the open source version
+
+The version of Wreditor in use in Write.app has been slightly modified for use specifically with the app. In particular there are a few extra note options, API access for note saving and secondary backups, and live previews in Write.app's Wreditor implementation as well as cosmetic differences to match the theme of the site. Wreditor Open (this version) will catch up with all of those missing features in future releases. They are not included in the open source version because of differences in the way the general public would need to use Wreditor and Write.app's specific use cases. It takes time to take a Write.app feature and add it to Wreditor in a way that's generally useful to everyone regardless of whether they have a Write.app account or not.
 </textarea>
 				</form>
 			</article>
